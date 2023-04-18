@@ -1,3 +1,7 @@
+// Input: {“geeksforgeeks”, “geeks”, “geek”, “geezer”}
+// Output: “gee”
+
+
 import java.util.*;
 public class longest_common_prefix{
     public static void main(String args[]){
