@@ -1,4 +1,4 @@
-//  ncr method     -    ncr = n!/((n!-r!)*r!) 
+//  ncr method     -    ncr = n!/((n-r)!*r!)  or ncr = i!/((i-j)!*r!)
 
 import java.util.*;
 public class pascal_triangle {
@@ -21,7 +21,7 @@ public class pascal_triangle {
                 System.out.print(" ");
             }
             for(int j=0;j<=i;j++){
-                int res = factorial(i)/(factorial(i-j)*factorial(j));     // ncr method
+                int res = factorial(i)/((factorial(i-j))*factorial(j));     // ncr method
                 System.out.print(res+" ");
             }
             System.out.println();

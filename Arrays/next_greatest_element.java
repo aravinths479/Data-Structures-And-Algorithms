@@ -1,5 +1,16 @@
-// input      [4, 5,  2,  25]
-// output     [5, 25, 25, -1] 
+// Input: arr[] = [ 4 , 5 , 2 , 25 ]
+// Output:  4      –>   5
+//                5      –>   25
+//                2      –>   25
+//               25     –>   -1
+// Explanation: except 25 every element has an element greater than them present on the right side
+
+// Input: arr[] = [ 13 , 7, 6 , 12 ]
+// Output:  13      –>    -1
+//                 7       –>     12
+//                 6       –>     12
+//                12      –>     -1
+// Explanation: 13 and 12 don’t have any element greater than them present on the right side
 
 import java.util.*;
 public class next_greatest_element {
