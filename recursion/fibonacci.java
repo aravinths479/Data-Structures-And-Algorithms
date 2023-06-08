@@ -1,6 +1,5 @@
 package recursion;
 
-import java.io.*;
 public class fibonacci {
 	public static int fib(int n)
 	{
