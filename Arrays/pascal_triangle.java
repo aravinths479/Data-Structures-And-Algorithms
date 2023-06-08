@@ -1,4 +1,4 @@
-//  ncr method     -    ncr = n!/((n-r)!*r!)  or ncr = i!/((i-j)!*r!)
+//  ncr method     -    ncr = n!/((n-r)!*r!)  or ncr = i!/((i-j)!*j!)
 
 import java.util.*;
 public class pascal_triangle {
