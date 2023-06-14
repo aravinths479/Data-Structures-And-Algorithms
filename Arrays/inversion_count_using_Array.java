@@ -1,3 +1,7 @@
+// Input: arr[] = {8, 4, 2, 1}
+// Output: 6
+// Explanation: Given array has six inversions: (8, 4), (8, 2), (8, 1), (4, 1),(4, 2), (2, 1).
+
 import java.util.*;
 public class inversion_count_using_Array {
     public static void inversion_count(int arr[], int n){
