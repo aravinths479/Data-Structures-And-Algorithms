@@ -1,0 +1,33 @@
+Casting to/from String:
+
+        String to int: int num = Integer.parseInt(str);
+        int to String: String str = Integer.toString(num);
+        String to double: double num = Double.parseDouble(str);
+        double to String: String str = Double.toString(num);
+
+        
+Boolean Conversions:
+
+        String to boolean: boolean value = Boolean.parseBoolean(str);
+        boolean to String: String str = Boolean.toString(value);
+
+
+Character Conversions:
+
+        char to int: int num = (int) ch;
+        int to char: char ch = (char) num;
+
+
+Object Conversions:
+
+Upcasting: Converting a subclass object to a superclass reference is implicitly allowed. For example:
+
+
+        Cat cat = new Cat();
+        Animal animal = cat; // Upcasting
+
+
+Downcasting: Converting a superclass reference to a subclass reference requires explicit casting and may throw a ClassCastException if the object is not actually an instance of the subclass. For example:
+
+        Animal animal = new Cat();
+        Cat cat = (Cat) animal; // Downcasting

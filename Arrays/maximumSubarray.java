@@ -1,6 +1,6 @@
 // input : [1,2,-4,3,1]
 // output : 4
-
+// explanation which combination of subarray produces the most value . in this 3,1 = 4 is the maximum subaraay 
 // algo tamizha  - explained in attack on typing
 
 import java.util.*;
