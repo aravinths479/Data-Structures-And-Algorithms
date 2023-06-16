@@ -1,3 +1,5 @@
+
+
 import java.util.*;
 public class transpose_of_a_matrix {
     static int[][] transpose(int arr[][],int n){
@@ -67,4 +69,19 @@ public class transpose_of_a_matrix {
 // 		}
 // 	}
 // }
+
+
+
+// another method
+
+// for(int i=0;i<matrix.length;i++){
+//             for(int j=0;j<matrix[0].length;j++){
+//                 if(j>=i){
+//                     int temp = matrix[i][j];
+//                     matrix[i][j] = matrix[j][i];    // transpose first
+//                     matrix[j][i] = temp;
+//                 }
+//             }
+//         }
+
 
