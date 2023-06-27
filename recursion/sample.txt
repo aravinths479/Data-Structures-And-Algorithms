@@ -1,0 +1,20 @@
+Write a recursive function to calculate the factorial of a given number.
+Implement a recursive function to find the nth Fibonacci number.
+Write a recursive function to calculate the sum of digits of a positive integer.
+Implement a recursive function to calculate the power of a number.
+Write a recursive function to find the greatest common divisor (GCD) of two numbers.
+Implement a recursive function to reverse a string.
+Write a recursive function to check if a given string is a palindrome.
+Implement a recursive function to calculate the sum of an array of integers.
+Write a recursive function to calculate the length of a string.
+Implement a recursive function to count the number of occurrences of a given element in an array.
+Write a recursive function to generate all possible subsets of a given set.
+Implement a recursive function to find the maximum element in an array.
+Write a recursive function to check if a given array is sorted in ascending order.
+Implement a recursive function to calculate the exponentiation of a number.
+Write a recursive function to calculate the product of two numbers without using the multiplication operator.
+Implement a recursive function to find the sum of all even numbers in a given range.
+Write a recursive function to check if a given string is a valid parentheses expression.
+Implement a recursive function to find the sum of the digits of a positive integer until it becomes a single-digit number.
+Write a recursive function to calculate the nth triangular number.
+Implement a recursive function to find the number of paths in a grid from the top-left corner to the bottom-right corner, where you can only move down or right.
