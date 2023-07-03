@@ -1,1 +1,3 @@
-//jhdgytf
+class test{
+
+}
