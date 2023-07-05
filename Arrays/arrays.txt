@@ -1,0 +1,104 @@
+Java provides several useful methods in the Arrays class for working with arrays. Here are some commonly used methods:
+
+toString(): This method converts an array into a string representation, which is useful for printing or displaying the 
+contents of an array.
+
+Example:
+
+int[] numbers = { 1, 2, 3, 4, 5 };
+String arrayString = Arrays.toString(numbers);
+System.out.println(arrayString);  // Output: [1, 2, 3, 4, 5]
+
+
+copyOf(): This method creates a copy of an array, either with a specified length or the same length as 
+the original array. It is useful when you need to create a new array that contains the same elements as the
+ original array.
+
+Example:
+
+int[] sourceArray = { 1, 2, 3, 4, 5 };
+int[] copiedArray = Arrays.copyOf(sourceArray, sourceArray.length);
+System.out.println(Arrays.toString(copiedArray));  // Output: [1, 2, 3, 4, 5]
+
+
+fill(): This method assigns a specified value to every element of an array. It is useful when you need to 
+initialize or reset the elements of an array to a specific value.
+
+Example:
+
+int[] numbers = new int[5];
+Arrays.fill(numbers, 0);
+System.out.println(Arrays.toString(numbers));  // Output: [0, 0, 0, 0, 0]
+
+
+
+sort(): This method sorts the elements of an array in ascending order. 
+It is useful when you need to sort the elements of an array.
+
+Example:
+
+int[] numbers = { 5, 2, 8, 1, 9 };
+Arrays.sort(numbers);
+System.out.println(Arrays.toString(numbers));  // Output: [1, 2, 5, 8, 9]
+
+
+
+binarySearch(): This method performs a binary search on a sorted array to find the index of a specified value. 
+It is useful when you need to search for a specific element in a sorted array.
+
+Example:
+
+int[] numbers = { 1, 2, 3, 4, 5 };
+int index = Arrays.binarySearch(numbers, 3);
+System.out.println("Element found at index: " + index);  // Output: Element found at index: 2
+These are just a few examples of the useful methods provided by the Arrays class in Java. 
+
+
+
+
+equals(): This method compares two arrays to determine if they are equal, i.e., 
+if they have the same length and contain the same elements in the same order.
+
+Example:
+
+int[] array1 = { 1, 2, 3 };
+int[] array2 = { 1, 2, 3 };
+boolean areEqual = Arrays.equals(array1, array2);
+System.out.println("Arrays are equal: " + areEqual);  // Output: Arrays are equal: true
+
+
+asList(): This method creates a fixed-size list backed by the specified array. 
+It is useful when you need to convert an array into a list or when you want to operate on an array using list-based operations.
+
+Example:
+
+String[] names = { "Alice", "Bob", "Charlie" };
+List<String> nameList = Arrays.asList(names);
+System.out.println(nameList);  // Output: [Alice, Bob, Charlie]
+
+
+
+stream(): This method returns a sequential stream with the elements of the array as its source. 
+It is useful when you want to perform stream operations, such as filtering, mapping, or reducing, 
+on the elements of an array.
+
+Example:
+
+int[] numbers = { 1, 2, 3, 4, 5 };
+Arrays.stream(numbers)
+      .filter(n -> n % 2 == 0)
+      .forEach(System.out::println);  // Output: 2 4
+
+
+
+hashCode(): This method returns the hash code for the specified array. 
+The hash code is computed based on the contents of the array.
+
+Example:
+
+int[] numbers = { 1, 2, 3, 4, 5 };
+int hashCode = Arrays.hashCode(numbers);
+System.out.println("Hash code: " + hashCode);  // Output: Hash code: 506871373
+These additional methods provide functionality such as array comparison, converting arrays to lists, 
+working with streams, and obtaining hash codes. The Arrays class in Java offers a wide range of methods to 
+facilitate common array operations and manipulations.
