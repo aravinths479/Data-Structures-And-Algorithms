@@ -27,6 +27,7 @@ public class check_if_two_given_matrices_are_identical {
             }
         }
         boolean res = check(arr1,arr2,n);
+       
         if(res){
             System.out.println("Matrix are identical");
         }

@@ -14,9 +14,7 @@ public class BestTimeSellStock {
                 min_value = prices[i];
             }
             int diff = prices[i] - min_value;
-            if(diff > max_profit ){
-                max_profit = prices[i] - min_value;
-            }
+            max_profit = Math.max(max_profit,diff);
         }
 
         return max_profit;

@@ -11,7 +11,7 @@ public class rotateImage {
     public static void rotate(int[][] matrix) {
         for(int i=0;i<matrix.length;i++){
             for(int j=0;j<matrix[0].length;j++){
-                if(j>=i){
+                if(j>i){
                     int temp = matrix[i][j];
                     matrix[i][j] = matrix[j][i];    // transpose first
                     matrix[j][i] = temp;
@@ -26,6 +26,7 @@ public class rotateImage {
                 int temp = matrix[i][left];             // then reverse the elements in each rows
                 matrix[i][left] = matrix[i][right];
                 matrix[i][right] = temp;
+                
                 left++;
                 right--;
             }

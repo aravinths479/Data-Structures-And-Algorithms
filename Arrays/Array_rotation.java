@@ -10,8 +10,8 @@
 
 // initial arr : [1,2,3,4,5,6,7]
 // reverse all : [7,6,5,4,3,2,1]
-// reverse first k nums : [5,6,7,4,3,2,1]
-// reverse remaining nums : [5,6,7,1,2,3,4]  - result
+// reverse first k nums : [5,6,7, 4,3,2,1]
+// reverse remaining nums : [5,6,7, 1,2,3,4]  - result
 
 
 import java.util.*;
@@ -39,7 +39,7 @@ public class Array_rotation{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         int arr[] = {1,2,3,4,5,6,7};
-        int K = 3;
-        calc(arr,K);
+        int k = 3;
+        calc(arr,k);
     }
 }

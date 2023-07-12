@@ -30,7 +30,7 @@ import java.util.*;
 
 public class FindSubarraysWithEqualSum {
     public static boolean findSubarrays(int[] nums) {
-        if(nums.length<3){
+        if(nums.length<=2){
             return false;
         }
         int first_sub = nums[0] + nums[1];
@@ -47,7 +47,7 @@ public class FindSubarraysWithEqualSum {
                 second_sub = nums[j-1] + nums[j];
                 if(first_sub == second_sub){
                 return true;
-            }
+                }
             }
         }
         return false;
@@ -65,7 +65,8 @@ class Solution {
         }
         Set<Integer> set = new HashSet<Integer>();
         for(int i=0;i<nums.length-1;i++){
-            if(set.contains(nums[i]+nums[i+1])){
+            if(set.contains(nums[i]+nums[i+1])){    // only two subarray needed so after adding for first time we check
+                                                    // for second sub array
                 return true;
             }
             else{

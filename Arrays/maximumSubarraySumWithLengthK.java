@@ -5,10 +5,10 @@
 
 //the maximum subarray sum of all the subarrays that meet the conditions
 // Explanation: The subarrays of nums with length 3 are:
-// - [2,9,31] which meets the requirements and has a sum of 42.
-// - [9,31,-1] which meets the requirements and has a sum of 39.
-// - [31,-1,21] which meets the requirements and has a sum of 48.
-// - [-1,21,7] which meets the requirements and has a sum of 27
+// [2,9,31], which meets the requirements and has a sum of 42.
+// [9,31,-4], which meets the requirements and has a sum of 36.
+// [31,-4,21], which meets the requirements and has a sum of 48.
+// [-4,21,7], which meets the requirements and has a sum of 24.
 // We return 48 because it is 
 
 
