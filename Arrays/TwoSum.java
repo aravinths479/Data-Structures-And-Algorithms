@@ -39,7 +39,7 @@ public class TwoSum {
 
     
 
-// this approach cannot be done because it sums  the same element twice in 2nd test case
+// this approach cannot be done because it sums  the same element twice in 2nd test case  - this logic is done by me
 
 //     public static int[] twoSum(int[] nums, int target) {
 //         Map<Integer,Integer> map = new HashMap<>();
