@@ -18,12 +18,12 @@ public class spiral_matrix {
             for (int i = colLower; i <= colUpper; i++) {
                 lst.add(arr[rowLower][i]);
             }
-            rowLower += 1;
+            rowLower ++;
 
             for (int i = rowLower; i <= rowUpper; i++) {
                 lst.add(arr[i][colUpper]);
             }
-            colUpper -= 1;
+            colUpper --;
 
             // breaking condition when it no longer should run this loop
             if (rowLower > rowUpper || colLower > colUpper) {

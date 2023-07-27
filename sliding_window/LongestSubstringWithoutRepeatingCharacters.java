@@ -25,7 +25,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LongestSubstringWithoutRepeatingCharacters {
-    public int lengthOfLongestSubstring(String s) {
+    public static int lengthOfLongestSubstring(String s) {
        int first = 0;
        int second = 0;
        int sum = 1;
@@ -42,5 +42,8 @@ public class LongestSubstringWithoutRepeatingCharacters {
            }
        }
        return sum;
+    }
+    public static void main(String args[]){
+        System.out.println(lengthOfLongestSubstring("pwwkew"));
     }
 }

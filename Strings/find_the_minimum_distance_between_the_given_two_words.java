@@ -21,6 +21,7 @@ public class find_the_minimum_distance_between_the_given_two_words{
         String word2 = sc.next();
         int index1 = -1;
         int index2 = -1;
+        // int min_dis = Integer.MAX_VALUE;
         for(int i=0;i<str.length;i++){
             if(str[i].equals(word1)){
                 index1 = i; 
@@ -35,6 +36,12 @@ public class find_the_minimum_distance_between_the_given_two_words{
                     min_distance = current_distance;
                 }
             }
+            // or
+            // if(index1!=-1 && index2!=-1){
+
+            //     min_dis = Math.min(min_dis,Math.abs(index1-index2));
+            // }
+
         }
         System.out.println(min_distance);
 

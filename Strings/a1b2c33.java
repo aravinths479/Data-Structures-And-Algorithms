@@ -19,7 +19,6 @@ public class a1b2c33 {
                 }
             nums = "";
             letter = c;    // for last iteration keep track of character
-
             }
             else{
                 nums = nums+c;
