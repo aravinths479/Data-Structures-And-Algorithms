@@ -1,50 +1,24 @@
-import java.util.*;
-public class test
-{
-	public static void main(String[] args) {
-	    int n=5;
+import java.text.DecimalFormat;
+import java.util.Scanner;
 
-        int arr[][]=new int[n][n];
-        int rowLower=0,colLower=0,rowUpper=n-1,colUpper=n-1,count=1;
+public class test {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        while(rowLower<=rowUpper && colLower<=colUpper)
-        {
-            for(int i=colLower;i<=colUpper;i++)
-            {
-                arr[rowLower][i] = count;
-                count++;
-            }
-            rowLower++;
+        // Prompt the user to enter the float value
+        System.out.print("Enter a float value: ");
+        float floatValue = scanner.nextFloat();
 
-            for(int i=rowLower;i<=rowUpper;i++)
-            {
-                arr[i][colUpper] = count;
-                count++;
-            }
-            colUpper--;
+        // Close the scanner
+        scanner.close();
 
-            for(int i=colUpper;i>=colLower;i--)
-            {
-                arr[rowUpper][i] = count;
-                count++;
-            }
-            rowUpper--;
+        // Create a DecimalFormat object to format the output
+        DecimalFormat decimalFormat = new DecimalFormat("###");
 
-            for(int i=rowUpper;i>=rowLower;i--)
-            {
-                arr[i][colLower] = count;
-                count++;
-            }
-            colLower++;
+        // Round the float value to two decimal places
+        String roundedValue = decimalFormat.format(floatValue);
 
-        }
-        
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++)
-                System.out.print(arr[i][j]+"\t");
-            System.err.println();
-        }
-		
-	}
-    
+        // Output the rounded value
+        System.out.println("Value: " + roundedValue); 
+    }
 }

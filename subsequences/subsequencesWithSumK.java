@@ -4,8 +4,7 @@
 
 // output : [1, 1] [2]
 
-package subsequences;
-import java.util.*;
+
 
 
 // public class subsequencesWithSumK {
@@ -35,6 +34,8 @@ import java.util.*;
 
 
 // if i want to only print one subsequence
+
+import java.util.*;
 
 public class subsequencesWithSumK {
     public static boolean print(int index,List<Integer> lst,int sum, int k, int arr[]){
