@@ -3,17 +3,33 @@
 
 package simple_programs;
 import java.util.*;
+// public class reverseNumber {
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+//         String str = "";
+//         while(n>0){
+//             int rem = n%10;
+//             str = str + rem;
+//             n = n/10;
+//         }
+//         System.out.println(str);
+        
+//     }
+// }
+
 public class reverseNumber {
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        String str = "";
+        int rev = 0;
         while(n>0){
             int rem = n%10;
-            str = str + rem;
+            rev = (rev * 10 ) + rem;
             n = n/10;
         }
-        System.out.println(str);
+        System.out.println(rev);
         
     }
 }
+

@@ -22,6 +22,7 @@ public class MergeSortAlgorithm {
                 right++;
             }
         }
+    
         while(left<=mid){
             temp.add(arr[left]);
                 left++;                       // left array remaining value to temp array
