@@ -19,10 +19,10 @@ public class hcf {
         int hcf = 1;
         if(n1<n2){
             for(int i=1;i<= n1;i++){
-            if(n1%i==0 && n2%i ==0){
-                hcf = i;
+                if(n1%i==0 && n2%i ==0){
+                    hcf = i;
+                }
             }
-        }
         System.out.println("HCF : "+hcf);
         }
         else{

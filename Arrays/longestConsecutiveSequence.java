@@ -31,10 +31,7 @@ public class longestConsecutiveSequence {
                 length = length+1;
             }
             max = Math.max(max,length);
-            
         }
-
-
         return max;
     }
     public static void main(String args[]){

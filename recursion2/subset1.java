@@ -23,7 +23,7 @@ public class subset1 {
     }
 
     public static void main(String args[]){
-        int[] nums = {1,2,3};
+        int[] nums = {3,2,1};
         List<List<Integer>> res = new ArrayList<>();
         res = subsets(nums);
         System.out.println(res);

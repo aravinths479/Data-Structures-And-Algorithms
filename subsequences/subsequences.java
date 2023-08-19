@@ -28,7 +28,6 @@ public class subsequences {
         lst.add(arr[index]);
         // Recursively call the print function with the next index to consider the next element.
         print(index + 1, lst, arr);
-
         // Exclude the current element at the given index from the subsequence.
         lst.remove(lst.size() - 1);
         // Recursively call the print function with the next index without the current element.

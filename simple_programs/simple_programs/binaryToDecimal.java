@@ -1,3 +1,5 @@
+package simple_programs;
+
 import java.util.*;
 public class binaryToDecimal {
     public static void main(String[] args) {

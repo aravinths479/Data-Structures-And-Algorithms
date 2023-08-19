@@ -1,4 +1,5 @@
-// Write a program to print all the LEADERS in the array. An element is a leader if it is greater than all the elements to its right side. And the rightmost element is always a leader. 
+// Write a program to print all the LEADERS in the array. An element is a leader if it is greater than all the 
+// elements to its right side. And the rightmost element is always a leader. 
 
 // For example:
 
@@ -23,6 +24,23 @@ public class leaders_in_an_array {
             }
         }
     }
+// another approach
+    // void printLeaders(int arr[], int size)
+    // {
+    //     int max_from_right =  arr[size-1];
+  
+    //     /* Rightmost element is always leader */
+    //     System.out.print(max_from_right + " ");
+      
+    //     for (int i = size-2; i >= 0; i--)
+    //     {
+    //         if (max_from_right < arr[i])
+    //         {          
+    //         max_from_right = arr[i];
+    //         System.out.print(max_from_right + " ");
+    //         }
+    //     }   
+    // }
 
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);

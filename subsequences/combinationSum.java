@@ -49,9 +49,10 @@ public class combinationSum {
     }
     public static void main(String args[]){
         int arr[] = {2,3,6,7};
+        int target = 7;
         List<Integer> lst = new ArrayList<>();
         List<List<Integer>> res = new ArrayList<>();
-        combinationSums(0,7,lst,7,0,arr,res);
+        combinationSums(0,target,lst,target,0,arr,res);
         System.out.println(res);
       
         

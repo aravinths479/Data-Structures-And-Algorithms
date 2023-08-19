@@ -8,7 +8,7 @@
 
 
 
-//  Input: arr[] = {1, 1, 2, 2, 2, 2, 3,},   x = 2
+//  Input: arr[] = {1, 1, 2, 2, 2, 2, 3,}   x = 2
 //   Output: 4 // x (or 2) occurs 4 times in arr[]
 
 

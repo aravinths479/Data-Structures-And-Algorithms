@@ -40,6 +40,11 @@ public class productOfArrayExceptSelf {
         for(int i=0;i<nums.length;i++){
             res[i] = left[i]*right[i];
         }
+
+//  Left Array : [1, 1, 2, 6]
+// Right Array : [24, 12, 4, 1]
+// Result : [24, 12, 8, 6]
+
         return res;
     }
     public static void main(String[] args) {

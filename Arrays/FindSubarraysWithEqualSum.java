@@ -39,8 +39,6 @@ public class FindSubarraysWithEqualSum {
         if(first_sub == second_sub){
                 return true;
             }
-
-        
         for(int i=3;i<nums.length;i++){
             first_sub = nums[i-2] + nums[i-1];
             for(int j=i;j<nums.length;j++){

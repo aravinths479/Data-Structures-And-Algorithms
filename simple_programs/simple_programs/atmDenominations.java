@@ -6,6 +6,8 @@
 // Your program should use variables, loops, and conditionals to achieve this simulation. 
 // Note: ATM balances and denominations are predefined, not real-time.
 
+package simple_programs;
+
 import java.lang.reflect.Array;
 import java.util.*;
 

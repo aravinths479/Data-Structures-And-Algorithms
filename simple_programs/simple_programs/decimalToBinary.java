@@ -1,4 +1,7 @@
 //package simple_programs;
+
+package simple_programs;
+
 import java.util.*;
 public class decimalToBinary {
     public static void main(String arsgs[]){

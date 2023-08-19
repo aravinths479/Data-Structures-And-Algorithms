@@ -1,3 +1,5 @@
+package simple_programs;
+
 public class OddEvenWithoutDivision {
     public static void main(String[] args) {
         int number = 7; // Change this to any number you want to check
