@@ -36,6 +36,22 @@ public class set1 {
         commonElements.retainAll(set4);   //intersection
 
         System.out.println("Common elements between set3 and set4: " + commonElements);
+
+        Set<String> stringSet = new HashSet<>();
+        stringSet.add("Apple");
+        stringSet.add("Banana");
+        stringSet.add("Cherry");
+
+        for (String element : stringSet) {
+            System.out.println(element);
+        }
+
+
+        Iterator<String> iterator = stringSet.iterator();
+        while (iterator.hasNext()) {
+            String element = iterator.next();
+            System.out.println(element);
+        }
     
     }
     

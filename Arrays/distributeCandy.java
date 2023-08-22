@@ -18,7 +18,8 @@
 
 // Input: candyType = [1,1,2,3]
 // Output: 2
-// Explanation: Alice can only eat 4 / 2 = 2 candies. Whether she eats types [1,2], [1,3], or [2,3], she still can only eat 2 different types.
+// Explanation: Alice can only eat 4 / 2 = 2 candies. 
+// Whether she eats types [1,2], [1,3], or [2,3], she still can only eat 2 different types.
 
 
 // Input: candyType = [6,6,6,6]
