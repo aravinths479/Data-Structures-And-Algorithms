@@ -16,6 +16,8 @@ package searching_Techniques.Binary_Search;
 
 public class CountOccurrences {
     public static int countOccurrences(int arr[], int target) {
+
+        
         int firstIndex = findFirstOccurrence(arr, target);
 
         if (firstIndex == -1) {

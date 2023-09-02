@@ -1,0 +1,115 @@
+
+**Easy Problems:**
+
+1. Fibonacci Series
+2. Factorial
+3. Counting Paths in Grid
+4. Coin Change Problem
+5. Climbing Stairs
+6. Minimum Steps to One (e.g., Collatz Conjecture)
+7. Longest Increasing Subsequence
+8. Maximum Subarray Sum
+9. Rod Cutting
+10. 0/1 Knapsack Problem
+11. Edit Distance
+12. Longest Common Subsequence
+13. Count Distinct Subsequences
+14. House Robber
+15. Jump Game
+16. Decode Ways
+17. Palindromic Substrings
+18. Unique Paths
+19. Word Break
+20. Maximum Product Subarray
+
+**Intermediate Problems:**
+
+21. Longest Palindromic Subsequence
+22. Regular Expression Matching
+23. Interleaving Strings
+24. Longest Valid Parentheses
+25. Longest Increasing Subarray
+26. Egg Drop Problem
+27. Unique Binary Search Trees
+28. Unique Binary Search Trees II
+29. Combination Sum
+30. Minimum Path Sum
+31. Longest ZigZag Subsequence
+32. Longest Bitonic Subsequence
+33. Longest Consecutive Subsequence
+34. Word Break II
+35. Palindrome Partitioning
+36. Maximum Subarray Sum Circular
+37. Longest Increasing Path in a Matrix
+38. Largest Divisible Subset
+39. Count Palindromic Substrings
+40. Longest Valid Parentheses
+41. Paint House
+42. Burst Balloons
+
+**Advanced Problems:**
+
+43. Longest Increasing Subsequence with Prime Elements
+44. Longest Common Increasing Subsequence (LCIS)
+45. Longest Common Subarray
+46. Distinct Subsequences II
+47. Minimum ASCII Delete Sum for Two Strings
+48. Minimum Cost for Tickets
+49. Coin Change II
+50. Edit Distance with Wildcards
+51. Regular Expression Matching with Wildcards
+52. Interleaving Strings with Wildcards
+53. Count Different Palindromic Subsequences
+54. Palindrome Partitioning II
+55. Word Break III (With word frequency)
+56. Maximum Sum Increasing Subsequence
+57. Count Palindromic Subsequences
+58. Longest Increasing Subsequence in N^2
+59. Maximum Length of Pair Chain
+60. Maximum Sum Circular Subarray
+61. Minimum Domino Rotations For Equal Row
+62. Minimum Window Substring
+63. Longest Substring Without Repeating Characters
+64. Maximal Rectangle (Using Histograms)
+65. Longest Valid Parentheses Substring (Using Stack)
+
+**Expert Level Problems:**
+
+66. Edit Distance (Levenshtein Distance) with Transpositions
+67. Longest Palindromic Substring (Manacher's Algorithm)
+68. Largest Rectangle in Histogram
+69. Regular Expression Matching (Hard)
+70. Minimum Window Substring (Hard)
+71. Maximum Subarray Sum with No Adjacent Elements
+72. Minimum Cost to Merge Stones
+73. Palindromic Substrings with Minimum Deletions
+74. Longest Increasing Path in a DAG
+75. Maximum Subarray Sum with One Deletion
+76. Minimum Number of Refueling Stops
+77. Largest Sum of Averages
+78. Distinct Subsequences III
+79. Longest Increasing Subsequence with Restricted Condition
+80. Longest Valid Parentheses Substring (Using DP)
+81. Longest Common Substring
+82. Edit Distance with Copy Operation
+83. Word Ladder II
+84. Minimum Knight Moves
+85. Kth Smallest Path in a Matrix
+86. Longest Arithmetic Subsequence of Given Difference
+87. Maximum Length of Repeated Subarray
+
+**Challenging Problems:**
+
+88. Longest Increasing Subsequence with Maximum Sum
+89. Maximum Subarray Sum with K Exclusions
+90. Regular Expression Matching (DP + Backtracking)
+91. Longest Increasing Subsequence with Maximum Sum
+92. Longest Increasing Subsequence with Minimum Sum
+93. Maximum Product of Word Lengths
+94. Count Submatrices with All Ones
+95. Shortest Path in Binary Matrix
+96. Maximum Points You Can Obtain from Cards
+97. Wildcard Matching (Regular Expression)
+98. Palindromic Subsequences with Minimum Insertions
+99. Stone Game III
+100. Maximum Vacation Days

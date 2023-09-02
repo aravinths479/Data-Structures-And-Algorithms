@@ -1,26 +1,40 @@
-import java.util.ArrayList;
-import java.util.List;
-
-class Solution {
-    public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
-        backtrack(nums, new ArrayList<>(), result);
-        return result;
-    }
-    
-    private void backtrack(int[] nums, List<Integer> current, List<List<Integer>> result) {
-        if (current.size() == nums.length) {
-            result.add(new ArrayList<>(current));
-            return;
-        }
-        
-        for (int i = 0; i < nums.length; i++) {
-            if (current.contains(nums[i])) {
-                continue;
+public class test2 {
+    // Function to find the lower bound of a target element in a sorted array
+    public static int lowerBound(int[] arr, int target) {
+        int left = 0, right = arr.length;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (arr[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid;
             }
-            current.add(nums[i]);
-            backtrack(nums, current, result);
-            current.remove(current.size() - 1);
         }
+        return left;
+    }
+
+    // Function to find the upper bound of a target element in a sorted array
+    public static int upperBound(int[] arr, int target) {
+        int left = 0, right = arr.length;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (arr[mid] <= target) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        return left;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 2, 2, 4, 4, 6, 7};
+        int target = 2;
+
+        int lowerIndex = lowerBound(arr, target);
+        int upperIndex = upperBound(arr, target);
+
+        System.out.println("Lower Bound of " + target + " is at index: " + lowerIndex);
+        System.out.println("Upper Bound of " + target + " is at index: " + upperIndex);
     }
 }
