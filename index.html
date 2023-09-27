@@ -1,0 +1,476 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+
+<body>
+  <div class="video-box">
+    <div class="player" id="player">
+      <video class="player_video viewer" src="./movie.mp4"></video>
+      <div class="player_controls">
+        <div class="progress-range" title="Jump-to">
+          <div class="progress-bar"></div>
+        </div>
+        <div class="left-controls">
+          <button class="player_button toggle" title='Toggle Play'><i class="fa fa-play" title="Play" id="play-btn"></i></button>
+          <button class="player_button stop" title='Start over'><i class="fa fa-stop" title="Play" id="stop-btn"></i></button>
+          <button class="player_button speaker"><i id="speaker_icon" class="fa fa-volume-up" aria-hidden="true"></i></button>
+          <input type="range" name="volume" class="player_slider" min="0" max="1" step="0.05" value="1"></input>
+        </div>
+        <div class="right-controls">
+          <!-- I don't see the need for spped changes but I'm leaving the code in for now -->
+          <!-- <button class="player_button rate_icon"><i class="fa fa-spinner" aria-hidden="true"></i></button>
+          <input type="range" name="playbackRate" class="player_slider" min="0.5" max="2" step="0.1" value="1"></input> -->
+          <button data-skip="-10" class="player_button"><i class="fa fa-fast-backward" aria-hidden="true"></i></button>
+          <button data-skip="10" class="player_button"><i class="fa fa-fast-forward" aria-hidden="true"></i></button>
+          <div class="time">
+            <span class="time-elapsed">00:00 / </span>
+            <span class="time-duration">2:38</span>
+          </div>
+          <button class="player_button screenSize"><i id="screenSize_icon" class="fa fa-expand" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script src="/Users/CMurphy/Desktop/JavaScript30-Challenge/Custom HTML5 Video Player/Custom HTML5 Video Player.js"></script> -->
+
+  <style>
+    *,
+*:before,
+*:after {
+  /* box-sizing: inherit; */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+  font-size: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button + button {
+  margin-left: 0.75em;
+}
+
+.upload {
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.video-box {
+  margin-top: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player {
+  width: 60%;
+  max-width: 50rem;
+  border: 0.25rem solid rgba(0, 0, 0, 0.445);
+  position: relative;
+  font-size: 0;
+  overflow: hidden;
+}
+.player_video {
+  width: 100%;
+  cursor: pointer;
+}
+.fa {
+  color: white;
+  font-size: 1rem;
+}
+
+.fa-play:hover,
+.fa-pause:hover,
+.fa-stop:hover,
+.fa-volume-up:hover,
+.fa-fast-backward:hover,
+.fa-fast-forward:hover {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+.player_button {
+  background: none;
+  border: 0;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+  max-width: 50px;
+  font-size: 1rem;
+}
+.player_button:focus,
+.player_button:hover {
+  border-color: #ffc600;
+  border-color: blue;
+}
+.player_slider {
+  width: 0.75rem;
+  height: 3rem;
+}
+.player_controls {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%) translateX(-5px); 
+  transition: all 0.3s;
+  flex-wrap: wrap; 
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0 1.5rem;
+}
+.player:hover .player_controls {
+  transform: translateY(0);
+}
+
+.player:hover .progress-range {
+  height: 0.75rem;
+}
+
+.right-controls {
+  display: flex;
+  justify-content: flex-end;
+}
+.left-controls {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.player_controls > * {
+  flex: 1;
+}
+.progress-range {
+  flex: 10;
+  position: relative;
+  display: flex;
+  flex-basis: 100%;
+  height: 1.5em;
+  transition: height 0.3s;
+  background: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.progress-bar {
+  background: dodgerblue;
+  width: 50%;
+  height: 100%;
+  border-radius: 1.5em;
+  transition: all 250ms ease;
+}
+
+.player:fullscreen {
+  max-width: none;
+  width: 100%;
+}
+.player:-webkit-full-screen {
+  /*CHROME*/
+  max-width: none;
+  width: 100%;
+}
+.player:-moz-full-screen {
+  /*FIREFOX*/
+  max-width: none;
+  width: 100%;
+}
+
+.time {
+  text-align: right;
+  position: relative;
+  top: 0.85em;
+  padding-left: 0.5em;
+  margin-right: 1em;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  /* user-select: none; */
+}
+
+.time-elapsed,
+.fa-fast-forward {
+  padding-left: 0.75em;
+}
+
+/**/
+/*css to style input type="range"*/
+input[type='range'] {
+  -webkit-appearance: none;
+  background: transparent;
+  width: 40%;
+  margin: 0 20px;
+}
+input[type='range']:focus {
+  outline: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type='range']::-webkit-slider-thumb {
+  height: 0.75em;
+  width: 1em;
+  border-radius: 0.25em;
+  background: dodgerblue;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4px;
+  box-shadow: 0 0 2px rgb(15, 14, 80);
+}
+
+input[type='range']::-moz-range-track {
+  /*?*/
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: #ffffff;
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type='range']::-moz-range-thumb {
+  /*?*/
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+  height: 12px;
+  width: 17px;
+  border-radius: 50px;
+  /* background: #ffc600; */
+  background: blue;
+  cursor: pointer;
+}
+
+@media (max-width: 827px) {
+  .fa {
+    color: white;
+    font-size: 0.9rem;
+  }
+  button + button {
+    margin-left: 0;
+  }
+  .time {
+    padding-left: 0;
+    margin-right: 0.5em;
+  }
+
+  .time-elapsed,
+  .fa-fast-forward {
+    padding-left: 0.75em;
+  }
+  .player {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .player {
+    width: 95%;
+  }
+}
+  </style>
+
+  <script>
+    /*target elements*/
+const player = document.querySelector('.player');
+const video = player.querySelector('.viewer');
+
+const progressRange = document.querySelector('.progress-range');
+const progressBar = document.querySelector('.progress-bar');
+const currentTime = document.querySelector('.time-elapsed');
+const duration = document.querySelector('.time-duration');
+
+const playBtn = document.getElementById('play-btn');
+const stopBtn = player.querySelector('.stop');
+
+const skipButtons = player.querySelectorAll('[data-skip]');
+
+const speakerIcon = player.querySelector('#speaker_icon');
+const ranges = player.querySelectorAll('.player_slider');
+/* MUTE button */
+const speaker = player.querySelector('.speaker');
+const volInput = player.querySelector('input[name="volume"]')
+//const speakerIcon = player.querySelector('#speaker_icon'); 
+
+// show play button when paused
+function showPlayIcon() {
+  playBtn.classList.replace('fa-pause', 'fa-play');
+  playBtn.setAttribute('title', 'Play');
+}
+
+// toggle between play and pause
+function togglePlay() {
+  if (video.paused) {
+    video.play();
+    playBtn.classList.replace('fa-play', 'fa-pause');
+    playBtn.setAttribute('title', 'Pause');
+  } else {
+    video.pause();
+    showPlayIcon();
+  }
+}
+
+// Stop video
+function stopVideo() {
+  video.currentTime = 0;
+  video.pause();
+}
+
+// not sure, is this for FF and REW?
+function skip() {
+  video.currentTime += +(this.dataset.skip);
+}
+
+// volume functions
+function handleRangeUpdate() {
+  video[this.name] = this.value;
+  (video['volume'] === 0 ? speakerIcon.className = "fa fa-volume-off" :
+    speakerIcon.className = "fa fa-volume-up")
+}
+
+let muted = false;
+
+function mute() {
+  if (!muted) {
+    video['volume'] = 0;
+    volInput.value = 0;
+    speakerIcon.className = "fa fa-volume-off"
+    muted = true;
+  } else {
+    video['volume'] = 1;
+    volInput.value = 1;
+    muted = false;
+    speakerIcon.className = "fa fa-volume-up"
+  }
+}
+
+// update progress bar as the video plays
+function updateProgress() {
+  progressBar.style.width = `${(video.currentTime / video.duration) * 100}%`;
+  currentTime.textContent = `${displayTime(video.currentTime)} /`;
+  duration.textContent = `${displayTime(video.duration)}`;
+}
+// Calculate display time format
+function displayTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = Math.floor(time % 60);
+  seconds = seconds > 9 ? seconds : `0${seconds}`;
+  return `${minutes}:${seconds}`;
+}
+
+// Click to seek within the video
+function setProgress(e) {
+  const newTime = e.offsetX / progressRange.offsetWidth;
+  progressBar.style.width = `${newTime * 100}%`;
+  video.currentTime = newTime * video.duration;
+}
+
+function scrub(event) {
+  const scrubTime = (event.offsetX / progressRange.offsetWidth) * video.duration;
+  video.currentTime = scrubTime;
+}
+
+// Spacebar used to play and pause
+document.body.onkeyup = function (e) {
+  if (e.keyCode == 32) {
+    togglePlay();
+  }
+}
+
+// =======================
+video.addEventListener('timeupdate', updateProgress);
+video.addEventListener('canplay', updateProgress);
+progressRange.addEventListener('click', setProgress);
+// ===================
+/*functions linked to elements*/
+// play, pause, stop
+video.addEventListener('click', togglePlay);
+video.addEventListener('keydown', (event) => event.keyCode === 32 && togglePlay());
+playBtn.addEventListener('click', togglePlay);
+stopBtn.addEventListener('click', stopVideo);
+// skip forward or backward
+skipButtons.forEach(button => button.addEventListener('click', skip));
+// volume
+ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
+ranges.forEach(range => range.addEventListener('mousemove', handleRangeUpdate));
+speaker.addEventListener('click', mute)
+
+// progress bar controls
+let mouseDown = false;
+progressRange.addEventListener('click', scrub);
+progressRange.addEventListener('mousemove', (event) => mouseDown && scrub(event));
+progressRange.addEventListener('mousedown', () => mouseDown = true);
+progressRange.addEventListener('mouseup', () => mouseDown = false);
+
+//fullscreen mode 
+const screen_size = player.querySelector('.screenSize');
+const controls = player.querySelector('.player_controls');
+const screenSize_icon = player.querySelector('#screenSize_icon');
+
+function changeScreenSize() {
+  if (player.mozRequestFullScreen) {
+
+    player.mozRequestFullScreen();
+    //change icon
+    screenSize_icon.className = "fa fa-compress";
+    /*control panel once fullscreen*/
+    video.addEventListener('mouseout', () => controls.style.transform = 'translateY(100%) translateX(-5px)');
+    video.addEventListener('mouseover', () => controls.style.transform = 'translateY(0)');
+    controls.addEventListener('mouseover', () => controls.style.transform = 'translateY(0)');
+    screen_size.addEventListener('click', () => {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+        screenSize_icon.className = "fa fa-expand";
+      }
+    });
+  } else if (player.webkitRequestFullScreen) {
+
+    player.webkitRequestFullScreen();
+
+    screenSize_icon.className = "fa fa-compress";
+
+    video.addEventListener('mouseout', () => controls.style.transform = 'translateY(100%) translateX(-5px)');
+    video.addEventListener('mouseover', () => controls.style.transform = 'translateY(0)');
+    controls.addEventListener('mouseover', () => controls.style.transform = 'translateY(0)');
+    screen_size.addEventListener('click', () => {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+        screenSize_icon.className = "fa fa-expand";
+      }
+    });
+  }
+}
+screen_size.addEventListener('click', changeScreenSize);
+/* end full screen */
+
+
+/*play rate button - NOT INTERESTED IN THESE CONTROLS */
+// const rate_icon = player.querySelector('.rate_icon')
+// const rateInput = player.querySelector('input[name="playbackRate"]')
+// let rateChanged = false;
+
+// function changeRate() {
+//   if (!rateChanged) {
+//     video['playbackRate'] = 0.5;
+//     rateInput.value = 0.5;
+//     rateChanged = true;
+//   } else {
+//     video['playbackRate'] = 1;
+//     rateInput.value = 1;
+//     rateChanged = false;
+//   }
+// }
+
+// rate_icon.addEventListener('click', changeRate)
+/**/
+  </script>
+
+</body>

@@ -52,6 +52,6 @@ public class ClimbingStairs {
         return arr[n];
     }
     public static void main(String args[]){
-        System.out.println( climbStairs(5) );
+        System.out.println(climbStairs(5) );
     }
 }

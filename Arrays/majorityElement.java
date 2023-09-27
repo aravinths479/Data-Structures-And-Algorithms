@@ -2,7 +2,8 @@
 // Output : 4
 // Explanation: The frequency of 4 is 5 which is greater than the half of the size of the array size. 
 
-
+import java.util.HashMap;
+import java.util.Map;
 
 class majorityElement {
 
@@ -29,6 +30,30 @@ class majorityElement {
 		else
 			System.out.println("No Majority Element");
 	}
+
+	// anothor solution 
+
+	public static int anotherSoloution(int[] nums) {
+
+        Map<Integer,Integer> map = new HashMap<>();
+
+        for(int i=0;i<nums.length;i++){
+            map.put(nums[i],map.getOrDefault(nums[i],0)+1);
+        }
+
+        System.out.println(map);
+        int max = Integer.MIN_VALUE;
+        int res = 0;
+		
+        for(Map.Entry<Integer,Integer> entry : map.entrySet()){
+            if(entry.getValue()>max){
+                max = entry.getValue();
+                res = entry.getKey();
+            }
+        }
+
+        return res;
+    }
 
 	// Driver code
 	public static void main(String[] args)
