@@ -30,34 +30,6 @@ import java.util.*;
 
 public class FindSubarraysWithEqualSum {
     public static boolean findSubarrays(int[] nums) {
-        if(nums.length<=2){
-            return false;
-        }
-        int first_sub = nums[0] + nums[1];
-        int second_sub = nums[1] + nums[2];
-
-        if(first_sub == second_sub){
-                return true;
-            }
-        for(int i=3;i<nums.length;i++){
-            first_sub = nums[i-2] + nums[i-1];
-            for(int j=i;j<nums.length;j++){
-                second_sub = nums[j-1] + nums[j];
-                if(first_sub == second_sub){
-                return true;
-                }
-            }
-        }
-        return false;
-    }
-    public static void main(String args[]){
-        int nums[] = {1,2,3,4,5};
-        System.out.println(findSubarrays(nums));
-    }
-}
-
-class Solution {
-    public boolean findSubarrays(int[] nums) {
         if(nums.length<3){
             return false;
         }
@@ -71,8 +43,11 @@ class Solution {
                 set.add(nums[i]+nums[i+1]);
             }
         }
-
-
         return false;
+    }
+    
+    public static void main(String args[]){
+        int nums[] = {1,2,3,4,5};
+        System.out.println(findSubarrays(nums));
     }
 }

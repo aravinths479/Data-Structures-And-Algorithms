@@ -7,6 +7,23 @@
 import java.util.*;
 
 public class containsDuplicate {
+    public static boolean check2(int []nums){
+        if(nums.length==2){
+            if(nums[0]!=nums[1]){
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+        Arrays.sort(nums);
+        for(int i=0;i<nums.length-1;i++){
+            if(nums[i]==nums[i+1]){
+                return true;
+            }
+        }
+        return false;
+    }
     public static boolean check(int[] nums) {
         Set<Integer> set = new HashSet<Integer>();
         for(int i=0;i<nums.length;i++){

@@ -24,8 +24,6 @@
 // }
 // If all assertions pass, then your solution will be accepted.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,1,2]
@@ -39,23 +37,23 @@
 // Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
 // It does not matter what you leave beyond the returned k (hence they are underscores).
 
-
 public class removeDuplicatesFromSortedArray {
     public static int removeDuplicates(int[] nums) {
-        if(nums.length==0){
+        if (nums.length == 0) {
             return 0;
         }
-        int unique = 1; // atleast one duplicate 
-        for(int i=1;i<nums.length;i++){
-            if(nums[i]!=nums[i-1]){
+        int unique = 1; // atleast one duplicate
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[i - 1]) {
                 nums[unique] = nums[i];
                 unique++;
             }
         }
         return unique;
     }
+
     public static void main(String[] args) {
-        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        int[] nums = { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
         System.out.println(removeDuplicates(nums));
     }
 }

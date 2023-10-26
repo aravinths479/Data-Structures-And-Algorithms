@@ -14,16 +14,16 @@ public class spiral_matrix {
         int colUpper = arr[0].length - 1; // Use arr[0].length for coloumns
 
         while (rowLower <= rowUpper && colLower <= colUpper) {
-            
+
             for (int i = colLower; i <= colUpper; i++) {
                 lst.add(arr[rowLower][i]);
             }
-            rowLower ++;
-
+            rowLower++;
             for (int i = rowLower; i <= rowUpper; i++) {
                 lst.add(arr[i][colUpper]);
             }
-            colUpper --;
+
+            colUpper--;
 
             // breaking condition when it no longer should run this loop
             if (rowLower > rowUpper || colLower > colUpper) {

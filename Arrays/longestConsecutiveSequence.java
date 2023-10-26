@@ -13,26 +13,35 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class longestConsecutiveSequence {
+        
     public static int longestConsecutive(int[] nums) {
-        Set<Integer> set = new HashSet<>();
-        for(int i:nums){
-            set.add(i);
+        if (nums == null || nums.length == 0) {
+            return 0;
         }
-        int max = 0;
 
-        for(int i=0;i<nums.length;i++){
-            if(set.contains(nums[i]-1)){
-                continue;
-            }
-
-            int length = 0;
-            while(set.contains(nums[i])){
-                nums[i] = nums[i]+1;
-                length = length+1;
-            }
-            max = Math.max(max,length);
+        // Create a HashSet to store the numbers in the array for quick lookup
+        HashSet<Integer> set = new HashSet<>();
+        for (int num : nums) {
+            set.add(num);
         }
-        return max;
+
+        int longestStreak = 0;
+
+        for (int num : set) {
+            if (!set.contains(num - 1)) { // Check if the number is the start of a sequence
+                int currentNum = num;
+                int currentStreak = 1;
+
+                while (set.contains(currentNum + 1)) { // Keep counting consecutive numbers
+                    currentNum++;
+                    currentStreak++;
+                }
+
+                longestStreak = Math.max(longestStreak, currentStreak);
+            }
+        }
+
+        return longestStreak;
     }
     public static void main(String args[]){
         int arr[] = {100,4,200,1,3,2};

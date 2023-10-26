@@ -55,8 +55,6 @@ public class peakElement {
                 right = mid-1;    
             }
         }
-
-        
         return -1;
     }
     public static void main(String[] args) {

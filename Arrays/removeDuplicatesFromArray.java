@@ -17,7 +17,6 @@ public class removeDuplicatesFromArray {
         for (int i = 0; i < result.size(); i++) {
             uniqueArr[i] = result.get(i);
         }
-
         return uniqueArr;
     }
 

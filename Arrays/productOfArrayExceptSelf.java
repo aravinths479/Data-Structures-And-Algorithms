@@ -16,13 +16,11 @@
 // Input: nums = [-1,1,0,-3,3]
 // Output: [0,0,9,0,0]
 
-import java.util.Arrays;
+import java.util.*;
 
 public class productOfArrayExceptSelf {
     public static int[] productExceptSelf(int[] nums) {
         
-       
-
         int left[] = new int[nums.length];
         int right[] = new int[nums.length];
         int res[] = new int[nums.length];

@@ -11,45 +11,39 @@
 
 import java.util.*;
 public class leaders_in_an_array {
-    public static void leaders(int arr[],int n){
-        for(int i=0;i<n;i++){
+    public static void leaders(int arr[]){
+        for(int i=0;i<arr.length;i++){
             int j;
-            for(j=i+1;j<n;j++){
+            for(j=i+1;j<arr.length;j++){
                 if(arr[i]<=arr[j]){
                     break;
                 } 
             }
-            if(j==n){
-                System.out.println(arr[i]+" ");
+            if(j==arr.length){
+                System.out.print(arr[i]+" ");
             }
         }
     }
 // another approach
-    // void printLeaders(int arr[], int size)
-    // {
-    //     int max_from_right =  arr[size-1];
-  
-    //     /* Rightmost element is always leader */
-    //     System.out.print(max_from_right + " ");
-      
-    //     for (int i = size-2; i >= 0; i--)
-    //     {
-    //         if (max_from_right < arr[i])
-    //         {          
-    //         max_from_right = arr[i];
-    //         System.out.print(max_from_right + " ");
-    //         }
-    //     }   
-    // }
+     public static void printLeaders(int arr[])
+    {
+        int max_from_right =  arr[arr.length-1];
+        System.out.print(max_from_right+" ");
+        for(int i=arr.length-1;i>=0;i--){
+            if(arr[i] > max_from_right ){
+                System.out.print(arr[i]+" ");
+                max_from_right = arr[i];
+            }
+        }
+    }
 
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        int n= sc.nextInt();
-        int arr[] = new int[n];
-        for(int i=0;i<n;i++){
-            arr[i]=sc.nextInt();
-        }
-        leaders(arr,n);
+        int arr[] = {16, 17, 4, 3, 5, 2};
+        
+       // leaders(arr);
+        System.out.println("Another Approach");
+        printLeaders(arr);
     }
 }
 
