@@ -1,11 +1,10 @@
 package searching_Techniques.Binary_Search;
 
-
 public class binary_search {
     public static int search(int arr[],int target,int beg,int end){
         
         if(beg<=end){
-
+            
             int mid = ( beg + end )/2;
             if(arr[mid]==target){
                 return mid;

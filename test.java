@@ -12,10 +12,7 @@ public class test {
         int nums[] = {3,6,7,11};
         int hr = 8;
         int max = findMax(nums);
-        for(int i=0;i<nums.length;i++){
-            int res = calc(nums,hr);
-            if(res<=)
-        }
+        
      
     }
 }
