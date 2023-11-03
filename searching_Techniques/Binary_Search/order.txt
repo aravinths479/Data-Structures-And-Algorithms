@@ -1,1 +1,12 @@
 binary search
+search in rotated sorted array
+search in rotated sorted array 2
+minimum in rotated sorted array
+how many times array in rotated
+peak element
+first and last occurences
+search in 2d matrix
+search in 2d matrix - 2 (visit again)
+single element in sorted array
+sqrt of a number
+search insert

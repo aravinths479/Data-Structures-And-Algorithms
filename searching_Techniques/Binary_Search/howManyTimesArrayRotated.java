@@ -13,7 +13,7 @@ public class howManyTimesArrayRotated {
 
         while(low<=high){
             int mid = (low+high)/2;
-            if(nums[low]<=nums[mid]){  // check for left half sorted or not if sorted go inside
+            if(nums[low]<=nums[mid]){  // check for left half sorted or not , if sorted go inside
                 if(nums[low]<ans){
                     index = low;
                     ans = nums[low];

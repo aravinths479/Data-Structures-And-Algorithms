@@ -39,7 +39,7 @@ public class searchInRotatedSortedArray2 {
             }
 
             // Check if there are duplicate elements at the low and mid positions
-            if (nums[low] == nums[mid]) {
+            if (nums[low] == nums[mid]) {   
                 low++;  // Skip duplicates on the left side by incrementing the low pointer.
             } else if (nums[low] <= nums[mid]) {
                 // Left subarray is sorted
