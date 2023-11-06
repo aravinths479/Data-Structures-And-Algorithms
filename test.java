@@ -21,7 +21,15 @@ public class test {
     }
 
     public static void main(String[] args) {
-        int target = 37;
-        System.out.println(sqrt(target));
+        String target = "jhfgdkjgdvk";
+        int len = 0;
+        
+        for(int i:target.toCharArray()){
+            len++;
+        }
+
+        System.out.println(len);
+        
+        
     }
 }
