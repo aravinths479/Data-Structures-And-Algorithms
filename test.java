@@ -65,6 +65,40 @@ public class test {
         }
         return false;
     }
+    public static boolean palindromeTwoPointer(String str){
+        int start = 0;
+        int end = str.length()-1;
+        while(start<end){
+            if(str.charAt(start)!=str.charAt(end)){
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
+
+
+    public static boolean isHappy(int n) {
+        String str = ""+n;
+        while(Integer.parseInt(str)>=0){
+            char[] nums = str.toCharArray();
+            int sum = 0;
+            for(int i:nums){
+                int ch = i-'0';
+                sum += ch*ch;
+            }
+            if(sum == 1){
+                return true;
+            }
+            if(sum<1){
+                return false;
+            }
+            str = ""+sum;
+        }
+
+        return false;
+    }
 
     public static void main(String[] args) {
 
@@ -76,6 +110,10 @@ public class test {
         // System.out.println(sumOfNnaturalNumbers(5));
         // System.out.println(pow(2, 10));
         // System.out.println(palindrome("malayalam"));
+        // System.out.println(palindromeTwoPointer("malayalam"));
+        
+        System.out.println(isHappy(2));
+
 
     }
 }
