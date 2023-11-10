@@ -16,6 +16,7 @@ public class test2 {
     public static void main(String[] args) {
         int arr[] = {16,17,4,3,5,2};
         
+        
         System.out.println(find(arr));
     }
 }
