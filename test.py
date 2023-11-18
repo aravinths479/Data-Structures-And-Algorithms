@@ -11,5 +11,5 @@ def generate_non_adjacent_subsequences(arr, current=[], index=0):
     generate_non_adjacent_subsequences(arr, current + [arr[index]], index + 2)
 
 # Example usage:
-my_array = [1, 2, 3, 4]
+my_array = [1, 2, 3]
 generate_non_adjacent_subsequences(my_array)
