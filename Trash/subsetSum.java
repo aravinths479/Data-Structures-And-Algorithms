@@ -1,4 +1,4 @@
-package recursion2;
+package Trash;
 import java.util.*;
 public class subsetSum {
     public static void print(int index,int[] arr,int sum,List<Integer> lst){

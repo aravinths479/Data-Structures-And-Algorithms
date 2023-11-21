@@ -19,7 +19,7 @@
 
 
 
-package recursion2;
+package Trash;
 import java.util.*;
 public class subset2 {
 

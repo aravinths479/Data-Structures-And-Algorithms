@@ -21,7 +21,15 @@ public class fibonacci {
         memo.put(n, fib);
         return fib;
     }
+
+    public static int recursive(int n){
+        if(n<=0){
+            return 1;
+        }
+        return recursive(n-1) + recursive(n-2);
+    }
     public static void main(String args[]){
-        System.out.println(fib(20));
+        //System.out.println(fib(20));
+        System.out.println(recursive(6));
     }
 }
