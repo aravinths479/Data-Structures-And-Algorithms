@@ -6,8 +6,6 @@
 
 
 
-
-
 // public class subsequencesWithSumK {
 //     public static void print(int index,List<Integer> lst,int sum, int k, int arr[]){
 //         if(index==arr.length){
