@@ -83,7 +83,13 @@ public class uniquePaths2 {
         }
 
         // Call the recursive function starting from the bottom-right corner.
-        return recursive(m - 1, n - 1, dp, obstacleGrid);
+       // return recursive(m - 1, n - 1, dp, obstacleGrid);
+        int res =  recursive(m - 1, n - 1, dp, obstacleGrid);
+        for(int i[]:dp){
+
+            System.out.println(Arrays.toString(i));
+        }
+        return res;
     }
 
     public static void main(String[] args) {

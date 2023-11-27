@@ -25,6 +25,7 @@
 // 1. Right -> Down -> Down
 // 2. Down -> Down -> Right
 // 3. Down -> Right -> Down
+
 package Dynamic_programming;
 
 import java.util.Arrays;
@@ -67,7 +68,12 @@ public class uniquePaths {
         }
         
         // Start the recursive calculation from the bottom-right corner.
-        return recursive(m - 1, n - 1, dp);
+        int res =  recursive(m - 1, n - 1, dp);
+        for(int i[]:dp){
+
+            System.out.println(Arrays.toString(i));
+        }
+        return res;
     }
 
     public static void main(String[] args) {
@@ -76,5 +82,6 @@ public class uniquePaths {
         
         // Call the uniquePaths function and print the result.
         System.out.println(uniquePaths(m, n));
+        
     }
 }
