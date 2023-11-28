@@ -1,3 +1,5 @@
+package Stack;
+
 class Node {
     int data;
     Node next;
