@@ -34,7 +34,7 @@ public class permutuationsString {
         return lst;
     }
     public static void main(String[] args) {
-        String str = "abc";
+        String str = "()";
         List<List<Character>> ans = new ArrayList<>();
         int firstIndex = 0;
         permutuate(str.toCharArray(),firstIndex,ans);
