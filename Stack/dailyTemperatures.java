@@ -29,20 +29,29 @@ import java.util.Stack;
 public class dailyTemperatures {
 
     public static int[] dailyTemperatures(int[] temperatures) {
-        int n = temperatures.length;
-        int[] result = new int[n];
-        Stack<Integer> stack = new Stack<>();
-
-        for (int i = 0; i < n; i++) {
-            while (!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]) {
-                int prevIndex = stack.pop();
-                result[prevIndex] = i - prevIndex;
+        // Stack to store indices of temperatures
+        Stack<Integer> st = new Stack<>();
+        
+        // Array to store the result (number of days until a warmer temperature)
+        int res[] = new int[temperatures.length];
+        
+        // Iterate through the temperatures array
+        for (int i = 0; i < temperatures.length; i++) {
+            // Check if the stack is not empty and the current temperature is higher than the temperature at the index on top of the stack
+            while (!st.empty() && temperatures[i] > temperatures[st.peek()]) {
+                // If true, pop the index from the stack and update the result at that index
+                int prevIndex = st.pop();
+                res[prevIndex] = Math.abs(i - prevIndex);
             }
-            stack.push(i);
+            
+            // Push the current index onto the stack
+            st.push(i);
         }
 
-        return result;
+        // Return the array containing the number of days until a warmer temperature for each day
+        return res;
     }
+
 
     public static void main(String[] args) {
         int[] temperatures = {73, 74, 75, 71, 69, 72, 76, 73};
