@@ -1,7 +1,7 @@
 // input : ({[]})
 // output : true
 
-package stack_programs;
+
 
 import java.util.*;
 

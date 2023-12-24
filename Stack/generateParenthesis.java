@@ -17,8 +17,6 @@ Output: ["()"]
 
 
 import java.util.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class generateParenthesis {
 
@@ -64,16 +62,10 @@ public class generateParenthesis {
         List<String> lst = new ArrayList<>();
 
         // Call the generate function to start generating combinations
-        //generate(n, "", close, open, lst);
+        generate(n, "", close, open, lst);
 
         // Print the generated combinations
         System.out.println(lst);
 
-        Stack<Integer> st = new Stack<>();
-        st.push(10);
-        st.push(11);
-        st.push(12);
-        st.push(13);
-        System.out.println(st);
     }
 }

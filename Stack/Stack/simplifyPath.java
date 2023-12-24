@@ -40,9 +40,6 @@ package Stack;
 
 import java.util.*;
 
-/**
- * simplifyPath
- */
 public class simplifyPath {
 
         // Function to simplify the given Unix-style file path

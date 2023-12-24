@@ -1,69 +1,40 @@
-class Node {
-    int data;
-    Node next;
+import java.util.Arrays;
+import java.util.Stack;
 
-    public Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
+class Solution {
+    public static int[] asteroidCollision(int[] asteroids) {
+        Stack<Integer> stack = new Stack<>();
 
-class StackUsingLinkedList {
-    private Node top;
+        for (int asteroid : asteroids) {
+            if (asteroid > 0) {
+                stack.push(asteroid);
+                System.out.println("postive ast : " + stack);
+            } else {
+                while (!stack.isEmpty() && stack.peek() > 0 && stack.peek() < Math.abs(asteroid)) {
+                    stack.pop(); // Destroy the asteroid moving to the right
+                    System.out.println("While loop : " + stack);
+                }
 
-    public StackUsingLinkedList() {
-        this.top = null;
-    }
-
-    // Push operation to add an element to the stack
-    public void push(int data) {
-        Node newNode = new Node(data);
-        if (top == null) {
-            top = newNode;
-        } else {
-            newNode.next = top;
-            top = newNode;
+                if (stack.isEmpty() || stack.peek() < 0) {
+                    stack.push(asteroid); // No collision or surviving asteroid moving to the left
+                    System.out.println("negative peek and ast peek : " + stack);
+                } else if (stack.peek() == Math.abs(asteroid)) {
+                    stack.pop(); // Both asteroids annihilate each other
+                    System.out.println("annihilate each other : " + stack);
+                }
+            }
         }
-        System.out.println(data + " pushed to the stack");
-    }
 
-    // Pop operation to remove the top element from the stack
-    public void pop() {
-        if (isEmpty()) {
-            System.out.println("Stack is empty. Cannot pop.");
-            return;
+        int[] result = new int[stack.size()];
+        for (int i = stack.size() - 1; i >= 0; i--) {
+            result[i] = stack.pop();
         }
-        int poppedValue = top.data;
-        top = top.next;
-        System.out.println(poppedValue + " popped from the stack");
-    }
 
-    // Peek operation to get the top element without removing it
-    public void peek() {
-        if (isEmpty()) {
-            System.out.println("Stack is empty. Cannot peek.");
-            return;
-        }
-        System.out.println("Top element: " + top.data);
-    }
-
-    // Check if the stack is empty
-    public boolean isEmpty() {
-        return top == null;
+        return result;
     }
 
     public static void main(String[] args) {
-        StackUsingLinkedList stack = new StackUsingLinkedList();
-
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
-
-        stack.peek();
-
-        stack.pop();
-        stack.pop();
-
-        stack.peek();
+        int arr[] = { 5, -2, 8, -6, 3, -10 };
+        System.out.println(Arrays.toString(asteroidCollision(arr)));
     }
 }
