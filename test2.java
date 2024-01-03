@@ -1,38 +1,43 @@
-import java.util.Arrays;
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
-class Solution {
+public class BFSExample {
+    // Assuming the graph is represented using an adjacency matrix
+    private static void bfs(int[][] graph, int startNode) {
+        int numNodes = graph.length;
+        boolean[] visited = new boolean[numNodes];
+        Queue<Integer> queue = new LinkedList<>();
 
-    public static String reverse(String str) {
-        String rev = "";
-        for (int i = str.length() - 1; i >= 0; i--) {
-            rev += str.charAt(i);
-        }
-        return rev;
-    }
+        // Mark the start node as visited and enqueue it
+        visited[startNode] = true;
+        queue.offer(startNode);
 
-    public static String reverseStr(String s, int k) {
+        while (!queue.isEmpty()) {
+            int currentNode = queue.poll();
+            System.out.print(currentNode + " ");
 
-        String res = "";
-        int i = 0;
-        int rev = 0;
-        while (i <= s.length() - k) {
-            if (rev != k) {
-                res += reverse(s.substring(i, i + k));
-                i = i + k;
-            }
-            if (rev == k) {
-                res += s.charAt(i);
-                i += 1;
+            // Visit all adjacent nodes of the current node
+            for (int neighbor = 0; neighbor < numNodes; neighbor++) {
+                if (graph[currentNode][neighbor] == 1 && !visited[neighbor]) {
+                    visited[neighbor] = true;
+                    queue.offer(neighbor);
+                }
             }
         }
-
-        return res;
     }
 
     public static void main(String[] args) {
-        String s = "abcd";
-        int k = 2;
-        System.out.println(reverseStr(s, k));
+        // Example adjacency matrix representing a graph
+        int[][] graph = {
+            {0, 1, 1, 0, 0},
+            {1, 0, 0, 1, 0},
+            {1, 0, 0, 1, 1},
+            {0, 1, 1, 0, 1},
+            {0, 0, 1, 1, 0}
+        };
+
+        // Start BFS from node 0
+        System.out.println("BFS starting from node 0:");
+        bfs(graph, 0);
     }
 }
