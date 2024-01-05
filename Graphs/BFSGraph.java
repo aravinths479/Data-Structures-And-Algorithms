@@ -9,6 +9,7 @@ public class BFSGraph {
     public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
         ArrayList<Integer> res = new ArrayList<>();
         Queue<Integer> queue = new LinkedList<>();
+        
         boolean visited[] = new boolean[V];
         queue.offer(0); // Start BFS from node 0
         visited[0] = true;
