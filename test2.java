@@ -1,52 +1,66 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
+import java.util.Queue;
 
-class test2 {
-    public static int findCircleNum(int[][] isConnected) {
-        int n = isConnected.length;
-        boolean[] visited = new boolean[n];
-        int provinces = 0;
-
-        // Convert the matrix to an adjacency list
-        List<List<Integer>> adjacencyList = matrixToAdjacencyList(isConnected);
-
-        for (int i = 0; i < n; i++) {
-            if (!visited[i]) {
-                dfs(adjacencyList, visited, i);
-                provinces++;
-            }
+class Solution {
+    public int orangesRotting(int[][] grid) {
+        if (grid == null || grid.length == 0 || grid[0].length == 0) {
+            return 0;
         }
 
-        return provinces;
-    }
+        int rows = grid.length;
+        int cols = grid[0].length;
+        int freshOranges = 0;
+        Queue<int[]> queue = new LinkedList<>();
 
-    private static void dfs(List<List<Integer>> adjacencyList, boolean[] visited, int city) {
-        visited[city] = true;
-
-        for (int neighbor : adjacencyList.get(city)) {
-            if (!visited[neighbor]) {
-                dfs(adjacencyList, visited, neighbor);
-            }
-        }
-    }
-
-    private static List<List<Integer>> matrixToAdjacencyList(int[][] matrix) {
-        int n = matrix.length;
-        List<List<Integer>> adjacencyList = new ArrayList<>();
-
-        for (int i = 0; i < n; i++) {
-            adjacencyList.add(new ArrayList<>());
-            for (int j = 0; j < n; j++) {
-                if (matrix[i][j] == 1 && i != j) {
-                    adjacencyList.get(i).add(j);
+        // Count fresh oranges and add rotten oranges to the queue
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (grid[i][j] == 1) {
+                    freshOranges++;
+                } else if (grid[i][j] == 2) {
+                    queue.offer(new int[]{i, j});
                 }
             }
         }
-        System.out.println(adjacencyList);
-        return adjacencyList;
+
+        int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+        int minutes = 0;
+
+        while (!queue.isEmpty() && freshOranges > 0) {
+            int size = queue.size();
+
+            for (int i = 0; i < size; i++) {
+                int[] curr = queue.poll();
+
+                for (int[] dir : directions) {
+                    int newRow = curr[0] + dir[0];
+                    int newCol = curr[1] + dir[1];
+
+                    if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols &&
+                            grid[newRow][newCol] == 1) {
+                        grid[newRow][newCol] = 2;
+                        freshOranges--;
+                        queue.offer(new int[]{newRow, newCol});
+                    }
+                }
+            }
+
+            minutes++;
+        }
+
+        return freshOranges == 0 ? minutes : -1;
     }
     public static void main(String[] args) {
-        int[][] isConnected = {{1, 1, 0}, {1, 1, 0}, {0, 0, 1}};
-        System.out.println(findCircleNum(isConnected));
+        Solution solution = new Solution();
+
+        // Example usage
+        int[][] grid = {
+            {2, 1, 1},
+            {1, 1, 0},
+            {0, 1, 1}
+        };
+
+        int result = solution.orangesRotting(grid);
+        System.out.println("Minimum time required for all oranges to rot: " + result);
     }
 }

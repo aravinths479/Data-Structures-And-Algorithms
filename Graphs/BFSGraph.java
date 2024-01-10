@@ -27,7 +27,7 @@ public class BFSGraph {
             }
         }
         return res; // Return the result of BFS traversal
-    }
+    }   
 
     public static void main(String[] args) {
         // Creating an instance of the BFSGraph class
