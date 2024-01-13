@@ -24,6 +24,15 @@ StringBuilder sb = new StringBuilder("Hello World");
 sb.delete(5, 11);
 System.out.println(sb.toString()); // Output: Hello
 
+StringBuilder sb = new StringBuilder("Hello, World!");
+
+// Delete a character at a specific index
+int indexToDelete = 7;
+sb.deleteCharAt(indexToDelete);
+
+// Print the modified StringBuilder
+System.out.println(sb.toString());
+
 
 4. Replacing: The `replace()` method enables you to replace a substring or a range of characters within the `StringBuilder` object.
 
