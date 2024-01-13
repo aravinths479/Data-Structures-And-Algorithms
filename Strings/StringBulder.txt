@@ -9,7 +9,6 @@ sb.append(" ");
 sb.append("World");
 System.out.println(sb.toString()); // Output: Hello World
 
-
 2. Inserting: The `insert()` method allows you to insert a string or other data types at a specific position within the `StringBuilder` object.
 
 
