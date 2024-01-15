@@ -1,0 +1,9 @@
+BFS
+DFS
+number of provinces
+no of islands
+flood fill 
+rotten oranges
+word Search
+island perimeter
+shortest path in binary Matrix
