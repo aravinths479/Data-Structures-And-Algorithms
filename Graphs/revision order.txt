@@ -2,6 +2,8 @@ BFS
 DFS
 number of provinces
 no of islands
+surrounded regions  -- read the intution in main function or in DSA note
+number of enclaves
 flood fill 
 rotten oranges
 word Search
