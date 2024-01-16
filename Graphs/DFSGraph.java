@@ -12,7 +12,7 @@ public class DFSGraph {
         // Add the current node to the result list
         res.add(node);
         
-        // Explore neighbors of the current node
+        // Explore neighbor s of the current node
         for (int i : lst.get(node)) {
             if (!visited[i]) {
                 dfs(i, lst, res, visited);
