@@ -1,3 +1,5 @@
+package recursion2.subsequences;
+
 
 
 public class subsequencesOfaGivenString {

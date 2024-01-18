@@ -1,3 +1,5 @@
+package recursion2.subsequences;
+
 // https://www.youtube.com/watch?v=AxNNVECce8c&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=6
 
 // Given an array. The task is to generate and print all of the possible subsequences of the given array using recursion.

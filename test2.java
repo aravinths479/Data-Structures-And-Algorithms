@@ -1,66 +1,57 @@
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
-class Solution {
-    public int orangesRotting(int[][] grid) {
-        if (grid == null || grid.length == 0 || grid[0].length == 0) {
-            return 0;
-        }
+/**
+ * test2
+ */
+public class test2 {
 
-        int rows = grid.length;
-        int cols = grid[0].length;
-        int freshOranges = 0;
-        Queue<int[]> queue = new LinkedList<>();
+    public static List<List<Integer>> threeSumFind(int[] nums) {
+        
+        List<List<Integer>> lst = new ArrayList<>();
+        
+        Set<List<Integer>> set = new HashSet<>();
+        
+        Arrays.sort(nums);
+        
+        int target = 0;
 
-        // Count fresh oranges and add rotten oranges to the queue
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                if (grid[i][j] == 1) {
-                    freshOranges++;
-                } else if (grid[i][j] == 2) {
-                    queue.offer(new int[]{i, j});
-                }
-            }
-        }
+        for (int i = 0; i < nums.length - 1; i++) {
+            int j = i + 1;
+            int k = nums.length - 1;
 
-        int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-        int minutes = 0;
-
-        while (!queue.isEmpty() && freshOranges > 0) {
-            int size = queue.size();
-
-            for (int i = 0; i < size; i++) {
-                int[] curr = queue.poll();
-
-                for (int[] dir : directions) {
-                    int newRow = curr[0] + dir[0];
-                    int newCol = curr[1] + dir[1];
-
-                    if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols &&
-                            grid[newRow][newCol] == 1) {
-                        grid[newRow][newCol] = 2;
-                        freshOranges--;
-                        queue.offer(new int[]{newRow, newCol});
+            while (j < k) {
+                int sum = nums[i] + nums[j] + nums[k];
+                if (sum == target) {
+                    if (set.add(Arrays.asList(nums[i], nums[j], nums[k]))) {
+                        lst.add(Arrays.asList(nums[i], nums[j], nums[k]));
                     }
+                    j++;
+                    k--;
+                } else if (sum < target) {
+                    j++;
+                } else {
+                    k--;
                 }
             }
-
-            minutes++;
         }
-
-        return freshOranges == 0 ? minutes : -1;
+        return lst;
     }
+    
+
+     
+
     public static void main(String[] args) {
-        Solution solution = new Solution();
-
-        // Example usage
-        int[][] grid = {
-            {2, 1, 1},
-            {1, 1, 0},
-            {0, 1, 1}
-        };
-
-        int result = solution.orangesRotting(grid);
-        System.out.println("Minimum time required for all oranges to rot: " + result);
+        int[] nums = {-1, 0, 1, 2, -1, -4};
+        List<List<Integer>> result = threeSumFind(nums);
+    
+        System.out.println("Unique triplets that add up to 0:");
+        for (List<Integer> triplet : result) {
+            System.out.println(triplet);
+        }
     }
+    
 }

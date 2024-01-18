@@ -1,0 +1,26 @@
+
+1. **Subset:**
+   - Definition: A subset is a selection of elements from a set without considering the order of the elements.
+   - Example: For the set {1, 2, 3}, subsets include {}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}.
+   - Number of subsets of a set with 'n' elements: \(2^n\).
+
+2. **Subsequence:**
+   - Definition: A subsequence is a sequence of elements from a sequence in which the relative order is maintained.
+   - Example: For the sequence "abc", subsequences include "", "a", "b", "c", "ab", "ac", "bc", "abc".
+
+3. **Permutation:**
+   - Definition: A permutation is an arrangement of elements in a specific order.
+   - Example: For the set {1, 2, 3}, permutations include {1, 2, 3}, {1, 3, 2}, {2, 1, 3}, {2, 3, 1}, {3, 1, 2}, {3, 2, 1}.
+   - Number of permutations of 'n' elements: \(n!\) (n factorial).
+
+4. **Combination:**
+   - Definition: A combination is a selection of elements from a set without considering the order of the elements.
+   - Example: For the set {1, 2, 3}, combinations of 2 elements include {1, 2}, {1, 3}, {2, 3}.
+   - Number of combinations of 'n' elements taken 'r' at a time: \(C(n, r) = \frac{n!}{r!(n-r)!}\).
+
+Key Takeaways:
+- Subsets and combinations involve selection without considering order.
+- Subsequences maintain order but may not include all elements.
+- Permutations involve arrangements where the order matters.
+- The number of subsets is \(2^n\), and the number of permutations is \(n!\).
+- Combinations are calculated using the combination formula \(C(n, r)\).
