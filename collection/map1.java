@@ -15,7 +15,6 @@ public class map1 {
             System.out.println(id + " : " + name);
         }
 
-
     }
 }
 
