@@ -24,7 +24,7 @@ Input
 [[], [1], [2], [], [], []]
 
  */
-
+package Stack;
 import java.util.LinkedList;
 import java.util.*;
 

@@ -1,7 +1,7 @@
 import java.util.*;
 public class stringbuffer {
     public static void main(String args[]) {
-        stringbuffer sb = new stringbuffer();
+        StringBuffer sb = new StringBuffer();
         sb.append(" KEC college");
         System.out.println(sb);
         // Covert StringBuffer into String using toString()

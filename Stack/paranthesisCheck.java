@@ -2,7 +2,7 @@
 // output : true
 
 
-
+package Stack;
 import java.util.*;
 
 public class paranthesisCheck {

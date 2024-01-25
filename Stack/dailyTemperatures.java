@@ -23,6 +23,7 @@ Output: [1,1,0]
 
  */
 
+package Stack;
 import java.util.Arrays;
 import java.util.Stack;
 

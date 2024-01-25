@@ -34,7 +34,7 @@ minStack.getMin(); // return -2
 
  */
 
-
+ package Stack;
 import java.util.Stack;
 
 class MinStack {

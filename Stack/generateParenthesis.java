@@ -15,7 +15,7 @@ Output: ["()"]
 
  */
 
-
+ package Stack;
 import java.util.*;
 
 public class generateParenthesis {
