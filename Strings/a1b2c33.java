@@ -1,3 +1,5 @@
+package Strings;
+
 // input : a1b2c10
 // output : abbcccccccccc
 

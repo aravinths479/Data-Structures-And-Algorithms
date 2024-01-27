@@ -24,7 +24,7 @@ Explanation: Notice that the path visits the origin twice.
 
  */
 
-
+ package Strings;
 import java.util.HashSet;
 
 public class pathCrossing {

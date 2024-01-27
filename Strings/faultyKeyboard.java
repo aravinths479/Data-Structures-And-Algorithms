@@ -41,7 +41,7 @@ After the eighth character, the text is "ponter".
 Therefore, we return "ponter".
 
  */
-
+package Strings;
 public class faultyKeyboard {
     public static String reverse(String str){
         String rev = "";

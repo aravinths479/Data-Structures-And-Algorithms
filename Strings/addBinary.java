@@ -1,6 +1,6 @@
 // Input: a = "11", b = "1"
 // Output: "100"
-
+package Strings;
 import java.math.BigInteger;
 
 public class addBinary {

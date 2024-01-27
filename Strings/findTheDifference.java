@@ -22,7 +22,7 @@ Output: "y"
 
 
  */
-
+package Strings;
 import java.util.ArrayList;
 
 public class findTheDifference {

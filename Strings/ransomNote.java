@@ -25,7 +25,7 @@ Input: ransomNote = "aa", magazine = "aab"
 Output: true
 
  */
-
+package Strings;
 
 import java.util.HashMap;
 

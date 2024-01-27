@@ -33,7 +33,7 @@ Output: -1
 Explanation: "you" is not a prefix of any word in the sentence.
 
  */
-
+package Strings;
 import java.util.Arrays;
 
 public class CheckIfaWordOccursAsPrefixOfAnyWordIn_a_Sentence {

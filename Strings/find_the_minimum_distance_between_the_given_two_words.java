@@ -6,6 +6,7 @@
 // Output: 2
 // Explanation: Minimum distance between the words “geeks” and “practice” is 2
 
+package Strings;
 
 import java.util.*;
 public class find_the_minimum_distance_between_the_given_two_words{

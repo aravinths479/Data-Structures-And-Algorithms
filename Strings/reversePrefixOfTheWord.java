@@ -34,7 +34,7 @@ Explanation: "z" does not exist in word.
 You should not do any reverse operation, the resulting string is "abcd".
 
 */
-
+package Strings;
 public class reversePrefixOfTheWord {
     
     public static String reverse(String str){

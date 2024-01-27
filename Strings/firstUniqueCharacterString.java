@@ -22,6 +22,7 @@ Output: -1
 
  */
 
+ package Strings;
 import java.util.HashMap;
 
 public class firstUniqueCharacterString {

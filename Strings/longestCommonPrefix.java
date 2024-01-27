@@ -1,6 +1,6 @@
 // Input: strs = ["flower","flow","flight"]
 // Output: "fl"
-
+package Strings;
 import java.util.*;
 
 public class longestCommonPrefix {

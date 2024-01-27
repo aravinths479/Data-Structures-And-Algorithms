@@ -36,7 +36,7 @@ Explanation: This is neither a IPv4 address nor a IPv6 address.
 
 **/
 
-
+package Strings;
 public class ipAddressValidation {
     public static boolean ipv4(String digit) {
         if (digit.length() < 1 || digit.length() > 3) {

@@ -26,7 +26,7 @@ lexicographically smaller.
 
  */
 
-
+ package Strings;
 
 public class maximumOccuringChar {
     public static char getMaxOccuringChar(String line)

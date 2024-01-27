@@ -23,7 +23,7 @@ Input: s = "abc"
 Output: false
 
  */
-
+package Strings;
 public class palindrome2 {
     public static boolean check(String s,int left,int right){
         while(left<right){

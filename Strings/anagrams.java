@@ -1,3 +1,5 @@
+package Strings;
+
 import java.util.*;
 public class anagrams {
     static boolean isAnagram(String a, String b) {

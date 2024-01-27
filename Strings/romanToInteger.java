@@ -13,6 +13,7 @@
 // D             500
 // M             1000
 
+package Strings;
 import java.util.HashMap;
 import java.util.Map;
 

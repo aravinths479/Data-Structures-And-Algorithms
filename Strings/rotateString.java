@@ -19,6 +19,7 @@ Input: s = "abcde", goal = "abced"
 Output: false
 
 */
+package Strings;
 
 public class rotateString {
     public static boolean rotate(String s, String goal) {

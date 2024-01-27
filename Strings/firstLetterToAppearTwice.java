@@ -28,7 +28,7 @@ Explanation:
 The only letter that appears twice is 'd' so we return 'd'.
 
  */
-
+package Strings;
 import java.util.*;
 
 public class firstLetterToAppearTwice {

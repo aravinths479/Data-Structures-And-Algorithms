@@ -25,7 +25,7 @@ Output: true
 
  */
 
-
+ package Strings;
 import java.util.*;
 
 public class isomorphicStrings {

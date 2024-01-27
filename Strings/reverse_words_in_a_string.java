@@ -3,6 +3,7 @@
 // input  - this is a test data
 // output - data test a is this
 
+package Strings;
 import java.util.*;
 
 public class reverse_words_in_a_string {

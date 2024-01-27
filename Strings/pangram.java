@@ -16,7 +16,7 @@
 
 // Input: sentence = "leetcode"
 // Output: false
-
+package Strings;
 import java.util.*;
 
 public class pangram {

@@ -32,6 +32,7 @@ Output: 3
 
  */
 
+package Strings;
 import java.util.Stack;
 
 public class MaximumNestingDepthParentheses {
