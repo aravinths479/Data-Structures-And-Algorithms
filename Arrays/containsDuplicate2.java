@@ -9,10 +9,12 @@ Example 1:
 
 Input: nums = [1,2,3,1], k = 3
 Output: true
+
 Example 2:
 
 Input: nums = [1,0,1,1], k = 1
 Output: true
+
 Example 3:
 
 Input: nums = [1,2,3,1,2,3], k = 2
@@ -24,25 +26,24 @@ import java.util.*;
 
 public class containsDuplicate2 {
     public static boolean containsNearbyDuplicate(int[] nums, int k) {
-        Map<Integer,Integer> map = new HashMap<>();
-        
-        for(int i=0;i<nums.length;i++){
+        Map<Integer, Integer> map = new HashMap<>();
 
-            if(map.containsKey(nums[i])){
+        for (int i = 0; i < nums.length; i++) {
 
-                if(i-map.get(nums[i]) <= k) {
+            if (map.containsKey(nums[i])) {
+
+                if (i - map.get(nums[i]) <= k) {
                     return true;
                 }
-            }  
-
-        map.put(nums[i],i);
-            
+            }
+            map.put(nums[i], i);
         }
         return false;
     }
+
     public static void main(String[] args) {
-        int nums[] = {1,0,1,1};
+        int nums[] = { 1, 0, 1, 1 };
         int k = 3;
-        System.out.println(containsNearbyDuplicate(nums,k));
+        System.out.println(containsNearbyDuplicate(nums, k));
     }
 }

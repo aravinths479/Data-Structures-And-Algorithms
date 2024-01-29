@@ -1,3 +1,4 @@
+package searching_Techniques.Binary_Search;
 // Suppose you have a sorted array of infinite numbers, how would you search an element in the array?
 // Source: Amazon Interview Experience. 
 // Since array is sorted, the first thing clicks into mind is binary search, but the problem here is that we don’t know size of array. 

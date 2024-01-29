@@ -16,6 +16,7 @@ public class inversion_count_using_Array {
         }   
         System.out.println(count);
     }
+
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -25,5 +26,6 @@ public class inversion_count_using_Array {
 
         }
         inversion_count(arr,n);
+        sc.close();
     }
 }
