@@ -12,6 +12,7 @@ public class TopKFrequentElements {
         System.out.println(sortedList);
         sortedList.sort((a, b) -> b.getValue() - a.getValue());
         System.out.println(sortedList);
+        
         // This line sorts the sortedList based on the values of the entries in descending order of frequency. Here's how it works:
 
         // sortedList.sort(...) sorts the list using a custom comparator. 

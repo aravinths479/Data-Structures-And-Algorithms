@@ -29,6 +29,13 @@ public class spiral_matrix {
             if (rowLower > rowUpper || colLower > colUpper) {
                 break;
             }
+            /*
+             * rowLower > rowUpper: If the lower row index has crossed the upper row index,
+             *                      there are no more valid rows left to traverse vertically.
+             * colLower > colUpper: If the lower column index has crossed the upper column
+             *                      index, there are no more valid columns left to traverse horizontally.
+             * 
+             */
 
             for (int i = colUpper; i >= colLower; i--) {
                 lst.add(arr[rowUpper][i]);

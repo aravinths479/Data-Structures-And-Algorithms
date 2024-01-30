@@ -30,8 +30,9 @@ Output: true
  */
 
 public class validMountainArray {
+
     public static boolean validMountainArray(int[] arr) {
-        if(arr.length==1 || arr.length==2){
+        if(arr.length==1 || arr.length==2)  {
             return false;
         }
 
@@ -39,12 +40,13 @@ public class validMountainArray {
         int right = arr.length-1;
 
         for(int i=0;i<arr.length-1;i++){
-            if(arr[left] < arr[left + 1]){
+            if(arr[left] < arr[left + 1]){ 
                 left++;
             }
         }
+
         for(int i=arr.length-1;i>0;i--){
-            if(arr[right - 1] > arr[right]){
+            if(arr[right] < arr[right-1]){
                 right--;
             }
         }

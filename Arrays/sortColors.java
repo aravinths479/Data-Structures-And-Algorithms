@@ -29,6 +29,9 @@ public class sortColors {
                 c1++;
             }
         }
+
+        // refer classmate notebook for this notes
+        
         for (int i = 0; i < nums.length; i++) {
             if (i < c0) {
                 nums[i] = 0;

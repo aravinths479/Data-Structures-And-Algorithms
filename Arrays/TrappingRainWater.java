@@ -17,8 +17,9 @@ public class TrappingRainWater {
                 max = height[i];
             }
             left[i] = max;
-        }
+        }        
         max = -1;
+        
         for(int i = height.length-1; i>=0;i--){
             if(height[i]>=max){
                 max = height[i];

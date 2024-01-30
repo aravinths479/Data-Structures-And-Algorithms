@@ -12,6 +12,7 @@
 //                12      –>     -1
 // Explanation: 13 and 12 don’t have any element greater than them present on the right side
  
+
 import java.util.*;
 public class next_greatest_element {
     public static void main(String args[]){

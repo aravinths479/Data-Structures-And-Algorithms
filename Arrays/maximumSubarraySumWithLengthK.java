@@ -13,27 +13,26 @@
 
 
 // sliding window technique
+
 public class maximumSubarraySumWithLengthK {
-    public static int check(int nums[], int k){
-        
+    public static int check(int nums[], int k) {
+
         int wsum = 0;
         int msum = Integer.MIN_VALUE;
-        for(int i=0;i<k;i++){
+        for (int i = 0; i < k; i++) {
             wsum = wsum + nums[i];
         }
         msum = wsum;
-        for(int i=k;i<nums.length;i++){
-            wsum = wsum - nums[i-k] + nums[i];
-            msum = Math.max(wsum,msum);
+        for (int i = k; i < nums.length; i++) {
+            wsum = wsum - nums[i - k] + nums[i];
+            msum = Math.max(wsum, msum);
         }
         return msum;
     }
-    public static void main(String args[]){
-        int nums[] = {2,9,31,-4,21,7};
+
+    public static void main(String args[]) {
+        int nums[] = { 2, 9, 31, -4, 21, 7 };
         int k = 3;
-        System.out.println(check(nums,k));
-    }   
+        System.out.println(check(nums, k));
+    }
 }
-
-
-
