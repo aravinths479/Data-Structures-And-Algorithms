@@ -23,6 +23,7 @@ Input: s = "abc"
 Output: false
 
  */
+
 package Strings;
 public class palindrome2 {
     public static boolean check(String s,int left,int right){
@@ -34,6 +35,7 @@ public class palindrome2 {
             right--;
         }
         return true;
+        
     }
     public static boolean validPalindrome(String s) {
         int left = 0;

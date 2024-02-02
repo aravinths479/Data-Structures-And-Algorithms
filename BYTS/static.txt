@@ -1,0 +1,114 @@
+  In Java, `static` is a keyword that can be applied to variables, methods, and
+  blocks. Here's a brief overview:
+  
+  1. Static Variables: 
+                        When a variable is declared as `static`,
+  it belongs to the class rather than any particular instance of the class.
+  There will be only one copy of the static variable, regardless of how many
+  instances of the class are created.
+  Static variables are shared among all instances of a class.
+  
+  ```java
+  public class Employee {
+  static int employeeCount; // Static variable
+  int employeeId;
+  
+  public Employee() {
+  employeeCount++; // Incremented for each new instance
+  employeeId = employeeCount; // Assign a unique ID to each instance
+  }
+  }
+  ```
+  
+  In this example, `employeeCount` is a static variable that counts the total
+  number of employees. Each time a new `Employee` object is created, the count
+  is incremented.
+  
+  2. Static Methods: 
+                    Similar to static variables, static methods belong to
+  the class rather than an instance. They can be called without creating an
+  instance of the class.
+  
+  ```java
+  public class Employee {
+  // ... (as before)
+  
+  public static void displayTotalEmployees() {
+  System.out.println("Total employees: " + employeeCount);
+  }
+  }
+  ```
+  
+  Here, `displayTotalEmployees` is a static method that can be called using
+  `Employee.displayTotalEmployees()` without creating an instance of
+  `Employee`.
+  
+  3. Static Blocks: 
+                    These are used to initialize static variables or
+  perform one-time actions when the class is loaded. They are executed only
+  once when the class is first loaded into the Java Virtual Machine (JVM).
+  
+  ```java
+  public class Employee {
+  static int employeeCount;
+  // ... (other variables)
+  
+  static {
+  System.out.println("Initializing Employee class");
+  // Additional static initialization code can be placed here
+  }
+  
+  // ... (rest of the class)
+  }
+  ```
+  
+  The static block is executed only once, when the class is loaded, and it can
+  be useful for setting up initial values or performing some setup tasks.
+  
+  Now, let's use a real-time analogy with an employee relationship:
+  
+  ```java
+  public class Employee {
+  static int totalEmployees;
+  int employeeId;
+  String name;
+  
+  static {
+  System.out.println("Initializing Employee class");
+  // Additional static initialization code can go here
+  }
+  
+  public Employee(String name) {
+  this.name = name;
+  totalEmployees++;
+  employeeId = totalEmployees;
+  System.out.println("New employee added: " + name + " (ID: " + employeeId +
+  ")");
+  }
+  
+  public void displayEmployeeDetails() {
+  System.out.println("Employee ID: " + employeeId);
+  System.out.println("Name: " + name);
+  }
+  
+  public static void displayTotalEmployees() {
+  System.out.println("Total employees: " + totalEmployees);
+  }
+  
+  public static void main(String[] args) {
+  Employee emp1 = new Employee("John Doe");
+  Employee emp2 = new Employee("Jane Smith");
+  
+  emp1.displayEmployeeDetails();
+  emp2.displayEmployeeDetails();
+  
+  Employee.displayTotalEmployees();
+  }
+  }
+  ```
+  
+  In this example, the `totalEmployees` static variable keeps track of the
+  total number of employees, and the `static` block is used for any class-level
+  initialization. The `Employee` class is then used to create instances
+  (employees) with unique IDs, and the total number of employees is displayed
+  using a static method.

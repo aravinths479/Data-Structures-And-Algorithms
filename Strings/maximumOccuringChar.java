@@ -25,8 +25,7 @@ with the same frequency, but t is
 lexicographically smaller.
 
  */
-
- package Strings;
+package Strings;
 
 public class maximumOccuringChar {
     public static char getMaxOccuringChar(String line)

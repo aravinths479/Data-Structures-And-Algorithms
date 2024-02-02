@@ -1,0 +1,30 @@
+A queue and a priority queue are both abstract data types used in computer science to organize 
+and manage collections of elements. 
+However, they differ in how they handle the order in which elements are processed.
+
+1. **Queue:**
+   - A queue is a data structure that follows the First-In-First-Out (FIFO) principle.
+   - Elements are added to the back (enqueue) and removed from the front (dequeue) of the queue.
+   - It operates on the basis that the first element added is the first one to be processed.
+   - Common operations include enqueue (add an element to the end of the queue) and dequeue 
+     (remove the element from the front of the queue).
+
+2. **Priority Queue:**
+   - A priority queue is a data structure that assigns priorities to elements and processes them based on these priorities.
+   - Elements with higher priorities are processed before elements with lower priorities.
+   - It does not strictly follow the FIFO principle; elements are processed based on their priority.
+   - Common operations include inserting an element with a priority, and extracting the element with the highest priority.
+
+**Key Differences:**
+- **Ordering:** Queue follows the FIFO order, while priority queue processes elements based on their priority.
+  
+- **Processing Order:** In a queue, elements are processed in the order they are added. In a priority queue, 
+                        elements are processed based on their assigned priorities.
+
+- **Usage:** Queues are commonly used in scenarios where the order of arrival is significant, 
+             like in task scheduling or print job queues. 
+             Priority queues are used when elements need to be processed in a specific order based on their priority, 
+             such as in Dijkstra's algorithm or Huffman coding.
+
+- **Implementation:** Queues can be implemented using arrays or linked lists. Priority queues can be implemented using 
+                    various data structures, such as binary heaps, Fibonacci heaps, or self-balancing binary search trees.

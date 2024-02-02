@@ -34,3 +34,4 @@ public class map1 {
 // replace(K key, V value): Replaces the value for the specified key with the specified value, if the key is present in the map.
 // getOrDefault(Object key, V defaultValue): Returns the value to which the specified key is mapped, or a default value if the key is not present in the map.
 // computeIfAbsent(K key, Function<? super K, ? extends V> mappingFunction): If the specified key is not already associated with a value, computes its value using the given mapping function and associates it with the key in the map.
+ 

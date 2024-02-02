@@ -6,7 +6,6 @@
 
 package Strings;
 
-import java.util.*;
 public class abbccc {
     public static void main(String args[]){
         String str = "aabbbcccccfffffff";
@@ -14,6 +13,7 @@ public class abbccc {
         int first = 0;
         int second = 0;
         int count = 0;
+
         while(second<str.length()){
             if(str.charAt(first)==str.charAt(second)){
                 count++;
@@ -25,7 +25,7 @@ public class abbccc {
                 count = 0;
             }
         }
-         res = res+ str.charAt(first) + count;
+        res = res+ str.charAt(first) + count;
         System.out.println(res);
     }
 }

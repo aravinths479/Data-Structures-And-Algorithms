@@ -11,7 +11,9 @@ A valid IPv6 address is an IP in the form "x1:x2:x3:x4:x5:x6:x7:x8" where:
 1 <= xi.length <= 4
 xi is a hexadecimal string which may contain digits, lowercase English letter ('a' to 'f') and upper-case English letters ('A' to 'F').
 Leading zeros are allowed in xi.
-For example, "2001:0db8:85a3:0000:0000:8a2e:0370:7334" and "2001:db8:85a3:0:0:8A2E:0370:7334" are valid IPv6 addresses, while "2001:0db8:85a3::8A2E:037j:7334" and "02001:0db8:85a3:0000:0000:8a2e:0370:7334" are invalid IPv6 addresses.
+
+For example, "2001:0db8:85a3:0000:0000:8a2e:0370:7334" and "2001:db8:85a3:0:0:8A2E:0370:7334" are valid IPv6 addresses,
+ while "2001:0db8:85a3::8A2E:037j:7334" and "02001:0db8:85a3:0000:0000:8a2e:0370:7334" are invalid IPv6 addresses.
 
 
 Example 1:
@@ -37,14 +39,11 @@ Explanation: This is neither a IPv4 address nor a IPv6 address.
 **/
 
 package Strings;
+
 public class ipAddressValidation {
     public static boolean ipv4(String digit) {
         if (digit.length() < 1 || digit.length() > 3) {
             return false;
-        }
-
-        if (digit.length() > 1 && digit.charAt(0) == '0') {
-            return false; // Leading zeros are not allowed
         }
 
         try {
@@ -67,7 +66,8 @@ public class ipAddressValidation {
             return false;
         }
 
-        // Check if the string consists of valid IPv6 characters (hexadecimal digits and colons)
+        // Check if the string consists of valid IPv6 characters (hexadecimal digits and
+        // colons)
         for (char c : digit.toCharArray()) {
             if (!((c >= '0' && c <= '9') || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F') || c == ':')) {
                 return false;
