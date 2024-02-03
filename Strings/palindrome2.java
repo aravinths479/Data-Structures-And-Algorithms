@@ -34,8 +34,7 @@ public class palindrome2 {
             left++;
             right--;
         }
-        return true;
-        
+        return true;   
     }
     public static boolean validPalindrome(String s) {
         int left = 0;
