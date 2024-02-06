@@ -42,51 +42,51 @@ import java.util.*;
 
 public class simplifyPath {
 
-        // Function to simplify the given Unix-style file path
-        public static String simplifyPath(String path) {
-            // Create a stack to store components of the simplified path
-            Stack<String> st = new Stack<>();
-            
-            // Split the input path using "/"
-            String components[] = path.split("/");
-    
-            // Process each component
-            for(String i : components) {
-                // If the component is "..", pop from the stack to move up one level
-                if(i.equals("..")) {
-                    if(!st.empty()) {
-                        st.pop();
-                    }
+    // Function to simplify the given Unix-style file path
+    public static String simplifyPath(String path) {
+        // Create a stack to store components of the simplified path
+        Stack<String> st = new Stack<>();
+
+        // Split the input path using "/"
+        String components[] = path.split("/");
+        System.out.println(Arrays.toString(components));
+        // Process each component
+        for (String i : components) {
+            // If the component is "..", pop from the stack to move up one level
+          if(i.equals("..")) {
+                if (!st.empty()) {
+                    st.pop();
                 }
-                // If the component is not empty and not ".", push it onto the stack
-                else if(!i.isEmpty() && !i.equals(".")) {
-                    st.push(i);
-                }
+            }            
+            // If the component is not empty and not ".", push it onto the stack
+            else if (!i.isEmpty() && !i.equals(".")) {
+                st.push(i);
             }
-    
-            // Build the simplified path from the stack
-            String res = "";
-            for(String str : st) {
-                res += "/" + str;
-            }
-    
-            // If the stack is empty, return "/"
-            return res.length() == 0 ? "/" : res;
         }
-    
-        // Main function for testing
-        public static void main(String[] args) {
-    
-            // Example usage
-            String path1 = "/home/";
-            String path2 = "/../";
-            String path3 = "/home//foo/";
-            String path4 = "/a/./b/../../c/";
-    
-            System.out.println(simplifyPath(path1));  // Output: "/home"
-            System.out.println(simplifyPath(path2));  // Output: "/"
-            System.out.println(simplifyPath(path3));  // Output: "/home/foo"
-            System.out.println(simplifyPath(path4));  // Output: "/c"
+
+        // Build the simplified path from the stack
+        String res = "";
+        for (String str : st) {
+            res += "/" + str;
         }
-    
+
+        // If the stack is empty, return "/"
+        return res.length() == 0 ? "/" : res;
+    }
+
+    // Main function for testing
+    public static void main(String[] args) {
+
+        // Example usage
+        String path1 = "/home/";
+        String path2 = "/../";
+        String path3 = "/home//foo/";
+        String path4 = "/a/./b/../../c/";
+
+        System.out.println(simplifyPath(path1)); // Output: "/home"
+        System.out.println(simplifyPath(path2)); // Output: "/"
+        System.out.println(simplifyPath(path3)); // Output: "/home/foo"
+        System.out.println(simplifyPath(path4)); // Output: "/c"
+    }
+
 }

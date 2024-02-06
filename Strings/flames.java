@@ -21,6 +21,9 @@ public class flames {
                 maleList.remove(Character.valueOf(i));
             }
         }
+        System.out.println(maleList);
+        System.out.println(femaleList);
+        
         int number = maleList.size() + femaleList.size();
         int count = 0;
 

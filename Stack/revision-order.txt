@@ -1,0 +1,7 @@
+simplify path
+daily temperatures
+next greater element
+next greater element -2 
+remove k digits
+asteroid Collision 
+valid paranthesis string

@@ -43,7 +43,7 @@ public class romanToInteger{
         
     }
     public static void main(String args[]){
-        int res = romanToInt("III");
+        int res = romanToInt("XIV");
         System.out.println(res);
     }
 }
