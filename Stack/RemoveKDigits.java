@@ -29,7 +29,6 @@ Explanation: Remove all the digits from the number and it is left with nothing w
 
  */
 
-
 package Stack;
 
 import java.util.Stack;
@@ -81,7 +80,8 @@ public class RemoveKDigits {
         // Convert StringBuilder to String and return the result
         return sb.toString();
     }
+
     public static void main(String[] args) {
-        System.out.println(removeKdigits("1432219",3));
+        System.out.println(removeKdigits("1432219", 3));
     }
 }

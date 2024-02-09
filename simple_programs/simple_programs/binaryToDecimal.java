@@ -1,3 +1,6 @@
+// input : 101
+// output : 5
+
 package simple_programs;
 
 import java.util.*;

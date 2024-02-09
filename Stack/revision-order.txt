@@ -5,3 +5,6 @@ next greater element -2
 remove k digits
 asteroid Collision 
 valid paranthesis string
+Evaluate ReversePolish Notation
+minimum String Length After Removing Substrings
+remove All Adjacent Duplicates In String

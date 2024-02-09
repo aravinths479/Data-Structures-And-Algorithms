@@ -1,0 +1,4 @@
+decimal to binary
+binary to decimal
+odd or evven without division
+opreators - folder

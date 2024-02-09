@@ -72,7 +72,7 @@ public class validParenthesisString {
         // asterisk (i.e., the left parenthesis appears after the asterisk or there's no
         // left parenthesis left to match with the asterisk), we break out of the loop
         // because no more valid matches can be found.
-        
+
         while (!leftBracket.isEmpty() && !star.isEmpty()) {
             if (leftBracket.pop() > star.pop()) {
                 return false;
