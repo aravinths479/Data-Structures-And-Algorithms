@@ -1,0 +1,18 @@
+1 . What is an automorphic number?
+ 
+    A number is called an automorphic number if and only if the square of the given number ends with the same number itself. 
+    For example, 25, 76 are automorphic numbers because their square is 625 and 5776, 
+    respectively and the last two digits of the square represent the number itself. 
+    Some other automorphic numbers are 5, 6, 36, 890625, etc.
+
+2 .   Harshad number 
+
+    A number is said to be the Harshad number if it is divisible by the sum of its digit.
+    For example, if number is 156, then sum of its digit will be 1 + 5 + 6 = 12. Since 156 is divisible by 12. 
+    So, 156 is a Harshad number.
+    Some of the other examples of Harshad number are 8, 54, 120, etc.
+    To find whether the given number is a Harshad number or not, 
+    calculate the sum of the digit of the number then, check whether the given number is divisible by the sum of its digit. If yes, then given number is a Harshad number.
+
+
+3 . 

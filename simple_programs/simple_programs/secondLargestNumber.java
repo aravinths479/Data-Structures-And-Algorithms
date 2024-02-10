@@ -1,4 +1,4 @@
-package simple_programs.simple_programs;
+package simple_programs;
 
 /**
  * secondLargestNumber

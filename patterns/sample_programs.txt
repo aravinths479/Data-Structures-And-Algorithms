@@ -68,6 +68,17 @@ Certainly! Here's the list of pattern problems along with their corresponding in
    1234
    12345
    ```
+  Number Triangle 
+  Inpuut : 5
+  Output :
+  ```
+  12345
+  1234
+  123
+  12
+  1
+
+   ``` 
 
 7. Palindromic Triangle:
    Input: 4
@@ -112,9 +123,6 @@ Certainly! Here's the list of pattern problems along with their corresponding in
        *
     ```
 
-
-
-Of course! Here are the remaining pattern problems along with their corresponding input and output.
 
 11. Number Pattern:
     Input: 4

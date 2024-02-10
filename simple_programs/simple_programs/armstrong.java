@@ -9,26 +9,26 @@
 package simple_programs;
 
 public class armstrong {
-    
-    public static boolean isArmstrong(int num){
-            int len = (""+num).length();
-            int originalNum = num;
-            int sum = 0;
-            while(num>0){
-                int rem = num%10;
-                sum = sum + (int)Math.pow(rem , len);
-                num = num/10;
-            }
-            
-            if(sum == originalNum){
-                return true;
-            }
-            return false;
-        
+
+    public static boolean isArmstrong(int num) {
+        int len = ("" + num).length();
+        int originalNum = num;
+        int sum = 0;
+        while (num > 0) {
+            int rem = num % 10;
+            sum = sum + (int) Math.pow(rem, len);
+            num = num / 10;
         }
+
+        if (sum == originalNum) {
+            return true;
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
-        
-        int num = 154;
+
+        int num = 153;
         System.out.println(isArmstrong(num));
     }
 }
