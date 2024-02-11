@@ -15,6 +15,11 @@ public class binaryToDecimal {
             val = val + (current * (int)Math.pow(2,power_val));
             power_val++;
         }
+
+        //  // Convert binary string to decimal
+        // int decimal = Integer.parseInt(binaryString, 2);
+        // short cut 
+
         int res = (int)val;
         System.out.println(res);
     }

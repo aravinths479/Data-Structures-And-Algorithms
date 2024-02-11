@@ -1,17 +1,22 @@
-/**
- * test
- */
 public class test {
 
   public static void main(String[] args) {
 
     int n = 5;
 
-    for (int i = 1; i <= n; i++) {
-      for (int spc = 0; spc <= n - i; spc++) {
-        System.out.print(" ");
+    int count1 = 1;
+    int count2 = 2*n - 1;
+    for(int i=0;i<n;i++){
+      
+      for(int j=0;j<n;j++){
+        if(i==j || i+j == n-1){
+          System.out.print("*");
+        }
+        else{
+          System.out.print(" ");
+        }
       }
-      for(int j=i;j<=)
+
       System.out.println();
     }
 
