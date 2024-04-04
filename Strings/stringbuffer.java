@@ -31,6 +31,4 @@ public class stringbuffer {
         // substring
         System.out.println(sb.substring(2, 6));
     }
-
-    
 }

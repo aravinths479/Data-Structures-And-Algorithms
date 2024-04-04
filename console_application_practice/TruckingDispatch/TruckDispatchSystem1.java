@@ -1,4 +1,4 @@
-package SpecialTraining;
+package console_application_practice.TruckingDispatch;
 
 import java.util.ArrayList;
 import java.util.HashMap;
