@@ -55,7 +55,6 @@ public class largestLocalValuesInMatrix {
                 res[i][j] = iterate(grid, i, j);
             }
         }
-
         // Return the resulting matrix containing the largest local values
         return res;
     }

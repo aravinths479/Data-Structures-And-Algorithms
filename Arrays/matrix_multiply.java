@@ -1,6 +1,7 @@
 import java.util.*;
 public class matrix_multiply {
     static int[][] multiply(int arr1[][], int arr2[][], int n){
+        
         int res[][] = new int[n][n];
         int sum = 0;
         for(int i=0;i<n;i++){

@@ -1,24 +1,25 @@
+
 public class test {
-
-  public static void main(String[] args) {
-
-    int n = 5;
-
-    int count1 = 1;
-    int count2 = 2*n - 1;
-    for(int i=0;i<n;i++){
-      
-      for(int j=0;j<n;j++){
-        if(i==j || i+j == n-1){
-          System.out.print("*");
+    public static void main(String[] args) {
+        String str = "a1b3c6e10";
+        char letter = ' ';
+        String nums = "";
+        for (char ch : str.toCharArray()) {
+            if(!(ch<='9' && ch>='0')){
+                if(nums!=""){
+                    for(int i=0;i<Integer.parseInt(nums);i++){
+                        System.out.print(letter);
+                    }
+                }
+                letter = ch;
+                nums="";
+            }
+            else{
+                nums+=ch;
+            }
         }
-        else{
-          System.out.print(" ");
+        for(int i=0;i<Integer.parseInt(nums);i++){
+            System.out.print(letter);
         }
-      }
-
-      System.out.println();
     }
-
-  }
 }

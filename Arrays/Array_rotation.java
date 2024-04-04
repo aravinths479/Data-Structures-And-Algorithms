@@ -29,6 +29,7 @@ public class Array_rotation{
     }
 
     public static void calc(int arr[] , int k){
+        k %= arr.length;
         arr = reverse(arr,0,arr.length-1);
         arr = reverse(arr, 0, k-1);
         arr = reverse(arr,k,arr.length-1);

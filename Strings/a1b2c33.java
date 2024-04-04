@@ -7,7 +7,7 @@ import java.util.*;
 public class a1b2c33 {
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        String str = sc.next();
+        String str = "a1b2c33";
         String nums = "";
         char letter = ' ';
         for(char c: str.toCharArray()){
@@ -20,7 +20,7 @@ public class a1b2c33 {
                
                 }
             nums = "";
-            letter = c;    // for last iteration keep track of character
+            letter = c;  
             }
             else{
                 nums = nums+c;
@@ -30,5 +30,6 @@ public class a1b2c33 {
         for(int i=0;i<n;i++){
             System.out.print(letter);
         }
+        sc.close();
     }
 }

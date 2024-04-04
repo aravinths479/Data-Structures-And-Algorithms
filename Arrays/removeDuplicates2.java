@@ -14,8 +14,6 @@ public class removeDuplicates2 {
                 System.out.print(arr[i]+" ");
             }
         }
-        
-    
     }
     public static void main(String[] args) {
         int arr[] = {1,1,2,2,2,4,5,1,8,9,9};

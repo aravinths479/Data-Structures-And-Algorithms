@@ -3,14 +3,9 @@
 
 
 
-
 // note rowLower and rowUpper mistakenly written in wrong format
 // also rowLower and rowUpper mistakenly written in wrong format 
 // check spiral_matrix another program
-
-
-
-
 
 
 

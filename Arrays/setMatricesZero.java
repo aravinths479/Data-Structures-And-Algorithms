@@ -37,6 +37,9 @@ public class setMatricesZero {
                 }
             }
         }
+        for(int i:row){
+            
+        }
 
         // Set entire rows and columns to zero based on the marked rows and columns
         for(int i=0; i < matrix.length; i++) {

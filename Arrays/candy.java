@@ -63,7 +63,7 @@ public class candy {
 
     public static void main(String[] args) {
         int ratings[] = {12,4,3,11,34,34,1,67};
-        System.out.println("Answer : "+candy(ratings));
+        System.out.println("Answer : "+ candy(ratings));
     }
     
 }

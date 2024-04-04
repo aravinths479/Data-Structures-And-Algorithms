@@ -16,10 +16,12 @@ public class InsertPosition {
         for (int i = n; i >= position; i--) {
             arr[i + 1] = arr[i];
         }
+
         System.out.println("Enter the element want to add : ");
         int element = sc.nextInt();
         arr[position] = element;
         System.out.println(Arrays.toString(arr));
+
         System.out.println("Element to be deleted (position) : ");
         int deletedPos = sc.nextInt();
 
@@ -27,6 +29,7 @@ public class InsertPosition {
             arr[i] = arr[i + 1];
         }
         System.out.println(Arrays.toString(arr));
+        
 
         System.out.println("Delete element by value : ");
         int delval = sc.nextInt();

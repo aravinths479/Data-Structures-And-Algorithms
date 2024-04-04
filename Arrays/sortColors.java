@@ -30,7 +30,7 @@ public class sortColors {
             }
         }
 
-        // refer classmate notebook for this notes
+        // refer DSA wriiten notes for this!
         
         for (int i = 0; i < nums.length; i++) {
             if (i < c0) {

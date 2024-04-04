@@ -25,6 +25,7 @@ public class maximumSubarray {
         int sum = 0;
         // finding max num in the array for ans default value
         int ans = max(arr);
+        
         for(int i=0;i<n;i++){
             if((sum+arr[i])<0){
                 sum = 0;

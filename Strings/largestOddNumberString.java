@@ -31,7 +31,7 @@ Explanation: "35427" is already an odd number.
 
 package Strings;
 public class largestOddNumberString {
-    public static String largestOddNumber(String num) {
+    public static String largestOddNumber(String num)    {
 
         if((num.charAt(num.length()-1)-'0')%2!=0){
             return num;
