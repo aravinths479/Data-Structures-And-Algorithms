@@ -7,5 +7,5 @@ var uniqueWordsSet = new Set(words);
 // Convert the Set back to an array using the spread operator
 var uniqueWordsArray = [...uniqueWordsSet];
 
-// Display the unique words
+// Display the unique words 
 console.log(uniqueWordsArray);

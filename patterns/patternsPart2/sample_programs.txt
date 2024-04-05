@@ -1,4 +1,3 @@
-Certainly! Here's the list of pattern problems along with their corresponding input and output.
 
 1. Right Triangle:
    Input: 5
