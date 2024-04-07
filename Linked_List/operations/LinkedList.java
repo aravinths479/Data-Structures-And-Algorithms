@@ -1,4 +1,4 @@
-package Linked_List;
+package Linked_List.operations;
 
 public class LinkedList {
     Node head;
@@ -75,6 +75,36 @@ public class LinkedList {
             node = node.next;
         }
         System.out.print(node.data);
+    }
+
+    public void reverse() {
+        Node prev = null;
+        Node current = head;
+        Node next = null;
+
+        while (current != null) {
+            next = current.next; // Store next node
+            current.next = prev; // Change next of current node
+            prev = current; // Move pointers one position ahead
+            current = next;
+        }
+        head = prev; // Make the last node as head
+    }
+
+    public void reverseAndPrint() {
+        // Reverse the linked list
+        reverse();
+
+        // Traverse and print the reversed linked list
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.data + " -> ");
+            current = current.next;
+        }
+        System.out.println("null");
+
+        // Reverse the linked list again to restore the original order
+        reverse();
     }
 
 }

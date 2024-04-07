@@ -1,4 +1,4 @@
-package Linked_List;
+package Linked_List.operations;
 
 public class Runner {
     public static void main(String args[]) {

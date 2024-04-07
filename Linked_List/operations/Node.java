@@ -1,4 +1,4 @@
-package Linked_List;
+package Linked_List.operations;
 
 public class Node {
     int data;
