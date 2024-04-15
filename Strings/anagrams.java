@@ -10,6 +10,7 @@ public class anagrams {
         b = b.toLowerCase();
         int arr1[] = new int[a.length()];
         int arr2[] = new int[b.length()];
+        
         for(int i=0;i<a.length();i++){
             arr1[i] = a.charAt(i);
         }

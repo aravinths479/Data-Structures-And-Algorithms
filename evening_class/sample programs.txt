@@ -1,0 +1,1 @@
+1. Write a Java program to find the sum of digits of a given number.

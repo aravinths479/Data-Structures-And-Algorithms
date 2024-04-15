@@ -25,6 +25,7 @@ public class permutuationsArray {
             ans.add(asList(arr));
             return;
         }
+
         for(int i=firstIndex;i<arr.length;i++){
             swap(arr,firstIndex,i);
             permutuate(arr, firstIndex+1, ans);

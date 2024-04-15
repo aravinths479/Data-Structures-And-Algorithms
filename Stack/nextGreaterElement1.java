@@ -48,7 +48,7 @@ public class nextGreaterElement1 {
         // Traverse nums2 array
         for (int i : nums2) {
             // While the stack is not empty and the current element is greater than the top
-            // of the stacku7
+            // of the stack
             while (!stack.empty() && stack.peek() < i) {
                 // Map the top of the stack to the current element, as it is the next greater
                 // element

@@ -31,6 +31,7 @@ import java.util.Stack;
 public class dailyTemperatures {
 
     public static int[] dailyTemperatures(int[] temperatures) {
+
         // Stack to store indices of temperatures
         Stack<Integer> st = new Stack<>();
 
