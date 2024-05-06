@@ -51,8 +51,6 @@ Example:
 int[] numbers = { 1, 2, 3, 4, 5 };
 int index = Arrays.binarySearch(numbers, 3);
 System.out.println("Element found at index: " + index);  // Output: Element found at index: 2
-These are just a few examples of the useful methods provided by the Arrays class in Java. 
-
 
 
 

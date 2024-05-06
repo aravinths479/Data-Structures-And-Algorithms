@@ -1,0 +1,59 @@
+
+1. **Basic Patterns:**
+   - `\d`: Matches any digit.
+   - `\D`: Matches any non-digit character.
+   - `\w`: Matches any word character (alphanumeric plus underscore).
+   - `\W`: Matches any non-word character.
+   - `\s`: Matches any whitespace character.
+   - `\S`: Matches any non-whitespace character.
+   - `.`: Matches any character except newline.
+   
+2. **Anchors:**
+   - `^`: Matches the start of a line.
+   - `$`: Matches the end of a line.
+   - `\b`: Matches a word boundary.
+   - `\B`: Matches a non-word boundary.
+   
+3. **Quantifiers:**
+   - `*`: Matches zero or more occurrences.
+   - `+`: Matches one or more occurrences.
+   - `?`: Matches zero or one occurrence.
+   - `{n}`: Matches exactly `n` occurrences.
+   - `{n,}`: Matches `n` or more occurrences.
+   - `{n,m}`: Matches between `n` and `m` occurrences.
+   
+4. **Character Classes:**
+   - `[abc]`: Matches any one of the characters `a`, `b`, or `c`.
+   - `[^abc]`: Matches any character except `a`, `b`, or `c`.
+   - `[a-z]`: Matches any lowercase letter.
+   - `[A-Z]`: Matches any uppercase letter.
+   - `[0-9]`: Matches any digit.
+   - `[a-zA-Z0-9]`: Matches any alphanumeric character.
+   
+5. **Grouping and Alternation:**
+   - `(abc)`: Capturing group.
+   - `(?:abc)`: Non-capturing group.
+   - `|`: Alternation (matches either preceding or following expression).
+   
+6. **Escaping Metacharacters:**
+   - `\`: Escapes a metacharacter to be treated as a literal.
+   
+7. **Modifiers:**
+   - `i`: Case-insensitive matching.
+   - `m`: Multiline matching.
+   - `s`: Treats the input as a single line.
+   - `x`: Allows whitespace and comments within the pattern.
+
+8. **Assertions:**
+   - `(?=pattern)`: Positive lookahead assertion.
+   - `(?!pattern)`: Negative lookahead assertion.
+   - `(?<=pattern)`: Positive lookbehind assertion.
+   - `(?<!pattern)`: Negative lookbehind assertion.
+   
+9. **Quantifier Greediness:**
+   - `*?`: Reluctant quantifier (matches as few characters as possible).
+   - `+?`: Possessive quantifier (matches as many characters as possible and does not backtrack).
+   - `??`: Lazy quantifier (matches as few characters as possible).
+   
+10. **Backreferences:**
+    - `\n`: Backreference to capturing group number `n`.
