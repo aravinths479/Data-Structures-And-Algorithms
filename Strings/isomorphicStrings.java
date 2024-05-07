@@ -18,7 +18,7 @@ Example 2:
 Input: s = "foo", t = "bar"
 Output: false
 
-TExample 3:
+Example 3:
 
 Input: s = "paper", t = "title"
 Output: true

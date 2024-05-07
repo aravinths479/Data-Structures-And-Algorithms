@@ -49,7 +49,6 @@ public class ransomNote {
                 map.put(r,map.get(r)-1);
             }
         }
-
         System.out.println(map);
 
         return true;

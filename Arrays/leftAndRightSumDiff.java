@@ -26,6 +26,7 @@
 
 public class leftAndRightSumDiff {
     public static int[] leftRightDifference(int nums[]){
+        
         int[] leftSum = new int[nums.length];
         int[] rightSum = new int[nums.length];
         int[] answer = new int[nums.length];
