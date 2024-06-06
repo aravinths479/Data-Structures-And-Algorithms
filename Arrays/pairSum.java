@@ -1,4 +1,5 @@
 // two sum (or) pair sum sorted array
+
 // input : arr[]={1,2,3,4,5} , x = 5
 // output : true
 

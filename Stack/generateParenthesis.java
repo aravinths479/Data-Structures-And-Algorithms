@@ -27,6 +27,7 @@ public class generateParenthesis {
     // - close: Count of closing parentheses in the current combination
     // - open: Count of open parentheses in the current combination
     // - lst: List to store the generated combinations
+    
     public static void generate(int n, String res, int close, int open, List<String> lst) {
         // Base case: If the length of the current combination is equal to 2n,
         // add it to the list and return
@@ -34,7 +35,6 @@ public class generateParenthesis {
             lst.add(res);
             return;
         }
-
         // Recursive calls:
 
         // If the count of closing parentheses is less than the count of open parentheses,

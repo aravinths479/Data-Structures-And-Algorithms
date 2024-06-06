@@ -3,7 +3,7 @@
 // Input: nums = [2,9,31,-4,21,7], k = 3
 // Output: 48
 
-//the maximum subarray sum of all the subarrays that meet the conditions
+// the maximum subarray sum of all the subarrays that meet the conditions
 // Explanation: The subarrays of nums with length 3 are:
 // [2,9,31], which meets the requirements and has a sum of 42.
 // [9,31,-4], which meets the requirements and has a sum of 36.

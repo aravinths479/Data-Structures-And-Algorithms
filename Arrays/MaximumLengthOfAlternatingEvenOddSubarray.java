@@ -20,7 +20,6 @@ public class MaximumLengthOfAlternatingEvenOddSubarray {
             }
         }
         return maxLength;
-
     }
 
     public static void main(String args[]) {

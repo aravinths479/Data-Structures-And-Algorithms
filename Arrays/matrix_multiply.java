@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class matrix_multiply {
     static int[][] multiply(int arr1[][], int arr2[][], int n){
         
@@ -38,5 +39,6 @@ public class matrix_multiply {
             }
             System.out.println();
         }
+        sc.close();
     }
 }
