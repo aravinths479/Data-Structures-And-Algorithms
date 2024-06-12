@@ -3,6 +3,7 @@
 // input : [1,2,-4,3,1]
 // output : 4
 // explanation which combination of subarray produces the most value . in this 3,1 = 4 is the maximum subaraay 
+
 import java.util.Scanner;
 
 public class maximumSubarray {
@@ -27,7 +28,6 @@ public class maximumSubarray {
                 currentSum = 0;
             }
         }
-
         System.out.println(maxSum);
     }
 }

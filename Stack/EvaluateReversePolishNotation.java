@@ -95,7 +95,8 @@ public class EvaluateReversePolishNotation {
     }
 
     public static void main(String[] args) {
-        String[] expression = { "10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+" };
+        //String[] expression = { "10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+" };
+        String[] expression = { "5","4","5","*","+","5","/" };
         System.out.println(evalRPN(expression));
 
     }

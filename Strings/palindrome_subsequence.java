@@ -51,3 +51,13 @@ public class palindrome_subsequence {
         System.out.println("Longest Palindromic Subsequence: " + longestPalindrome);
     }
     }
+
+
+
+
+ //  arara
+
+    //  adbvararajhdjvararavjdj
+
+
+    // 7

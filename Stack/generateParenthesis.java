@@ -39,7 +39,7 @@ public class generateParenthesis {
 
         // If the count of closing parentheses is less than the count of open parentheses,
         // add a closing parenthesis to the current combination
-        if (close < open) {
+        if (open > close) {
             generate(n, res + ")", close + 1, open, lst);
         }
 
