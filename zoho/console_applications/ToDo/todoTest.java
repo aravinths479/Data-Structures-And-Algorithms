@@ -1,4 +1,4 @@
-package console_application_practice.ToDo;
+package ToDo;
 
 import java.util.*;
 
@@ -95,7 +95,7 @@ class Todo {
     }
 }
 
-public class codeByChatGPT {
+public class todoTest {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
